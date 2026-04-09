@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* IFT Institutional Palette */
+    --ift-navy: 214 62% 21%;        /* #1B3A6B */
+    --ift-blue: 211 74% 37%;        /* #175FA6 */
+    --ift-red: 350 76% 41%;         /* #BE1E2D */
+    --ift-gold: 43 88% 52%;         /* #F5A623 */
+
+    /* UI tokens */
+    --background: 210 17% 96%;
+    --foreground: 214 40% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 214 40% 13%;
+    --primary: 211 74% 37%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 17% 93%;
+    --secondary-foreground: 214 40% 20%;
+    --muted: 210 17% 93%;
+    --muted-foreground: 214 20% 45%;
+    --accent: 43 88% 52%;
+    --accent-foreground: 214 40% 10%;
+    --border: 210 16% 87%;
+    --input: 210 16% 87%;
+    --ring: 211 74% 37%;
+    --destructive: 350 76% 41%;
+    --destructive-foreground: 0 0% 100%;
+    --radius-xl: 1rem;
+    --radius-lg: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* IFT Branded Header Bar */
+  .ift-header {
+    background: linear-gradient(135deg, #1B3A6B 0%, #175FA6 60%, #1B3A6B 100%);
+    box-shadow: 0 2px 12px rgba(23, 95, 166, 0.35);
+  }
+
+  /* Hero search area */
+  .search-hero {
+    background: linear-gradient(135deg, #1B3A6B 0%, #0D2A52 100%);
+  }
+
+  /* Provider chip buttons */
+  .provider-chip {
+    @apply flex flex-col items-center justify-center gap-1 rounded-xl border-2 border-transparent
+           bg-white px-3 py-2 text-xs font-semibold shadow-sm transition-all duration-200
+           hover:scale-105 hover:shadow-md active:scale-95 cursor-pointer select-none;
+    min-width: 72px;
+  }
+
+  .provider-chip.active {
+    @apply border-blue-600 ring-2 ring-blue-200;
+    transform: scale(1.05);
+  }
+
+  /* Search input */
+  .search-input-hero {
+    @apply w-full rounded-2xl border-0 bg-white px-5 py-4 text-base font-medium shadow-xl
+           outline-none ring-0 transition-all placeholder:text-slate-400
+           focus:ring-4 focus:ring-white/30;
+  }
+
+  /* Tarifa card */
+  .tarifa-card {
+    @apply relative flex flex-col overflow-hidden rounded-2xl border border-slate-200
+           bg-white shadow-sm transition-all duration-200
+           hover:-translate-y-1 hover:shadow-md;
+  }
+
+  .tarifa-card-header {
+    @apply flex items-center justify-between px-5 py-3;
+  }
+
+  .price-badge {
+    @apply inline-flex items-baseline gap-1 rounded-xl px-3 py-1;
+    background: linear-gradient(135deg, #175FA6, #1B3A6B);
+    color: white;
+  }
+
+  /* Filter pills */
+  .filter-pill {
+    @apply flex cursor-pointer items-center gap-1.5 rounded-full border border-slate-200
+           bg-white px-4 py-1.5 text-sm font-medium text-slate-600 shadow-sm
+           transition-all hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700;
+  }
+
+  .filter-pill.active {
+    @apply border-blue-600 bg-blue-600 text-white;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    @apply flex items-center gap-3 rounded-xl bg-white/10 px-4 py-2 backdrop-blur-sm;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #175FA6, #5BA4F5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shadow-card {
+    box-shadow: 0 4px 24px rgba(23, 95, 166, 0.08), 0 1px 4px rgba(0,0,0,0.06);
+  }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fade-up 350ms ease-out both;
+  }
+
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateX(-8px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  .animate-slide-in {
+    animation: slide-in 250ms ease-out both;
+  }
+}

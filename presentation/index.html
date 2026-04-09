@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso del Comparador de Tarifas Móviles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@700;900&display=swap">
+    <style>
+        :root {
+            --ift-primary: #1e3a8a; /* Azul marino elegante */
+            --ift-secondary: #0ea5e9; /* Azul claro vibrante */
+            --ift-gold: #f59e0b; /* Acento cálido */
+            --text-dark: #1e293b; /* Texto oscuro principal */
+            --text-muted: #64748b; /* Texto secundario gris */
+            --bg-page: #f8fafc; /* Fondo general de la página super claro */
+            --bg-card: #ffffff; /* Fondo blanco para tarjetas y descripciones */
+        }
+        
+        .reveal {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); /* Gradiente menta/azul muy sutil y atractivo */
+            color: var(--text-dark);
+        }
+        
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: none;
+            color: var(--ift-primary);
+            text-shadow: none; /* Quitamos sombras pesadas */
+            margin-bottom: 20px;
+        }
+        
+        .reveal h1 { font-weight: 900; }
+        .reveal h2 { font-weight: 800; color: var(--ift-primary); }
+        .reveal h3 { font-weight: 700; color: var(--ift-secondary); }
+        .reveal h4 { font-weight: 700; font-size: 1.1em; color: var(--ift-primary); margin-bottom: 10px; margin-top: 10px; }
+        
+        /* Imagen responsiva */
+        img.screenshot {
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);
+            max-width: 100%;
+            height: auto;
+            max-height: 48vh !important;
+            border: 4px solid #ffffff; /* Borde tipo marco blanco */
+            object-fit: contain;
+            background: white;
+        }
+
+        .desc {
+            font-size: 0.85em;
+            color: var(--text-dark);
+            margin-top: 15px !important;
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid var(--ift-secondary);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); /* Sombra suave de tarjeta */
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        /* Utilidades de Grid para layout de 2 columnas */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: center;
+        }
+        /* Responsividad del grid */
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .reveal h3 { font-size: 1.5em; }
+            .desc { font-size: 0.75em; }
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .tech-tag {
+            background: #e0f2fe;
+            border: 1px solid #bae6fd;
+            color: #0369a1;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.75em;
+            font-weight: 700;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .filter-list {
+            text-align: left;
+            font-size: 0.8em;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .filter-list li {
+            margin-bottom: 15px;
+            background: var(--bg-card);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--ift-secondary);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            line-height: 1.4;
+        }
+        .filter-list strong { color: var(--ift-primary); }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- PORTADA -->
+            <section>
+                <h1 style="font-size: 2.2em;">Comparador de Tarifas Móviles</h1>
+                <h3 style="color: var(--text-muted);">Presentación del Proyecto</h3>
+                <p style="font-size: 0.9em; color: var(--text-muted); font-weight: 600;">Guía rápida de uso, arquitectura y filtros</p>
+            </section>
+
+            <!-- QUÉ ES -->
+            <section>
+                <h2>¿Qué es esta plataforma?</h2>
+                <div class="desc">
+                    El <strong>Comparador de Tarifas Móviles</strong> es una herramienta web interactiva diseñada para dar transparencia al mercado de telecomunicaciones. 
+                    Permite a los usuarios buscar, filtrar y analizar detalladamente los planes y tarifas de telefonía celular disponibles, empoderándolos para tomar la mejor decisión según su presupuesto y necesidades.
+                </div>
+            </section>
+
+            <!-- DATOS, INSTRUCCIONES, GITHUB -->
+            <section>
+                <h2>Datos y Metodología</h2>
+                <div class="grid-2" style="font-size: 0.85em; text-align: left;">
+                    <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                        <h4>📥 Datos de Entrada</h4>
+                        <p style="color: var(--text-muted);">Se utilizan fuentes de bases de datos regulatorias abiertas (del IFT), que incluyen catálogos de tarifas con más de 6,500 registros y cientos de proveedores.</p>
+                    </div>
+                    <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                        <h4>⚙️ Instrucciones / Proceso</h4>
+                        <p style="color: var(--text-muted);">Los datos pasaron por un proceso de <strong>limpieza</strong>, <strong>normalización</strong> de precios/gigas, y adaptación para búsquedas ultrarrápidas en memoria.</p>
+                    </div>
+                </div>
+                <div class="desc" style="text-align: center; margin-top: 30px !important; border-left: 5px solid var(--ift-primary);">
+                    <strong>Repositorio de Código Abierto (GitHub):</strong> <br>
+                    <a href="https://github.com/ivan-/tarifas_servicios_moviles" style="color: var(--ift-secondary); font-weight: bold; text-decoration: none;">github.com/ivan-/tarifas_servicios_moviles</a>
+                </div>
+            </section>
+
+            <!-- HERRAMIENTAS -->
+            <section>
+                <h2>Herramientas Usadas</h2>
+                <p style="font-size: 0.9em; color: var(--text-muted); font-weight: 600;">Desarrollado con las tecnologías más modernas y de alto rendimiento:</p>
+                
+                <div class="tech-tags">
+                    <span class="tech-tag">React ⚛️ (Frontend)</span>
+                    <span class="tech-tag">Vite ⚡ (Build Tool)</span>
+                    <span class="tech-tag">Tailwind CSS 🎨 (Estilos)</span>
+                    <span class="tech-tag">FastAPI 🚀 (Backend Python)</span>
+                    <span class="tech-tag">DuckDB / Polars 🦆 (Análisis de Datos)</span>
+                    <span class="tech-tag">Docker 🐳 (Contenedores)</span>
+                </div>
+            </section>
+
+            <!-- BUSCADOR PRINCIPAL -->
+            <section>
+                <h3>El Buscador Principal</h3>
+                <img src="../pictures/Captura de pantalla 2026-04-09 125723.png" class="screenshot" alt="Uso del Buscador">
+                <p class="desc">Cuenta con una barra de búsqueda inteligente donde puedes introducir nombres de empresas, planes o características para acceder al instante a la tabla de resultados. La actualización es reactiva (en tiempo real).</p>
+            </section>
+
+            <!-- FILTROS EXPLICACIÓN -->
+            <section>
+                <h3>Panel de Filtros</h3>
+                <div class="grid-2">
+                    <div>
+                        <img src="../pictures/Captura de pantalla 2026-04-09 125745.png" class="screenshot" alt="Filtros" style="max-height: 60vh !important;">
+                    </div>
+                    <div>
+                        <ul class="filter-list">
+                            <li><strong>Proveedor:</strong> Selecciona una o varias compañías telefónicas específicas (ej. Telcel, AT&T) para ver únicamente sus ofertas.</li>
+                            <li><strong>Modalidad:</strong> Escoge si prefieres pagar por recargas (Prepago) o mediante contrato mensual (Pospago).</li>
+                            <li><strong>Rango de Precio:</strong> Un ajustador (slider) para fijar el costo mínimo y máximo mensual que deseas.</li>
+                            <li><strong>Beneficios Incluidos:</strong> Filtra opciones que tengan un mínimo garantizado de Gigabytes (MB), SMS, Minutos o Redes Sociales ilimitadas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESULTADOS Y VISTAS -->
+            <section>
+                <h3>Visualización de Resultados</h3>
+                <div class="grid-2">
+                    <div>
+                        <img src="../pictures/Captura de pantalla 2026-04-09 125932.png" class="screenshot" alt="Resultados Tarjetas">
+                        <p style="font-size: 0.7em; color: var(--text-muted); font-weight: 600; margin-top: 10px;">Vista en Tarjetas</p>
+                    </div>
+                    <div>
+                        <img src="../pictures/Captura de pantalla 2026-04-09 125949.png" class="screenshot" alt="Comparativa de Tablas">
+                        <p style="font-size: 0.7em; color: var(--text-muted); font-weight: 600; margin-top: 10px;">Analítica de Tablas</p>
+                    </div>
+                </div>
+                <div class="desc" style="margin-top: 5px !important;">
+                    La plataforma se adapta a dos modalidades de vista garantizando una lectura siempre clara y visual, sin importar el formato preferido por el usuario para su comparación.
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: true,
+            width: "100%", /* Fix Responsividad */
+            height: "100%", 
+            margin: 0.1,
+            transition: 'slide'
+        });
+    </script>
+</body>
+</html>

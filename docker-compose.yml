@@ -1,0 +1,30 @@
+services:
+  api:
+    build:
+      context: ./backend
+    container_name: tarifas_api
+    environment:
+      APP_CSV_PATH: /data/raw/05_tarifas_servicios_moviles_febrero26_gustavo.csv
+      APP_PARQUET_PATH: /data/cache/tarifas_servicios_moviles.parquet
+      APP_ALLOWED_STATUSES_RAW: VIGENTE
+      APP_INCLUDE_POR_INICIAR: "false"
+      APP_CORS_ALLOW_ORIGINS: http://localhost:5173
+    volumes:
+      - ./05_tarifas_servicios_moviles_febrero26_gustavo.csv:/data/raw/05_tarifas_servicios_moviles_febrero26_gustavo.csv:ro
+      - parquet_cache:/data/cache
+    ports:
+      - "8000:8000"
+
+  web:
+    build:
+      context: ./frontend
+    container_name: tarifas_web
+    environment:
+      VITE_API_BASE_URL: http://localhost:8000/api/v1
+    depends_on:
+      - api
+    ports:
+      - "5173:5173"
+
+volumes:
+  parquet_cache:
