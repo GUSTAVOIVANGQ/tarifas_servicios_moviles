@@ -66,6 +66,4 @@ Aplicaciones disponibles:
 
 Capturas de pantalla del funcionamiento de la plataforma:
 
-![Buscador Inteligente](pictures/Captura%20de%20pantalla%202026-04-09%20135049.png)
-![Panel de Filtros](pictures/Captura%20de%20pantalla%202026-04-09%20133701.png)
 ![Resultados y Vistas](pictures/Captura%20de%20pantalla%202026-04-09%20125932.png)
