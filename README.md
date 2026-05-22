@@ -45,3 +45,11 @@ Aplicaciones disponibles:
 - El CSV original se monta en modo solo lectura.
 - El cache Parquet se guarda en un volumen Docker (`parquet_cache`).
 - Las columnas no necesarias se ignoran en lectura sin modificar el archivo fuente.
+
+## Evidencia
+
+Capturas de pantalla del funcionamiento de la plataforma:
+
+![Buscador y Filtros](pictures/buscador_filtros.png)
+![Resultados y Comparativa](pictures/resultados_comparativa.png)
+![Detalle de Planes](pictures/detalle_planes.png)
