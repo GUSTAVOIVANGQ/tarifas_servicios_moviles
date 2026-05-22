@@ -34,6 +34,7 @@ Aplicaciones disponibles:
 
 ## Mejoras fase 2
 
+- 
 - Query engine DuckDB reutilizable para reducir overhead por request.
 - Tabla con virtualizacion de filas para listados extensos.
 - UI con drawer de filtros en movil, chips removibles y selector de filas por pagina.
