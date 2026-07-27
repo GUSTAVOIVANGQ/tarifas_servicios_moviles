@@ -94,24 +94,29 @@ A continuación se listan los comparadores de tarifas de telecomunicaciones más
 
 Los siguientes prototipos fueron generados con IA como punto de partida para la maquetación del equipo de Frontend.
 
-### Vista principal — Buscador web
+### Tablero comparativo de variantes — Cuestionario, Grid, Simulador y Trazabilidad
 
-![Prototipo Buscador Web](Prototipos/prototipo_buscador_web.png)
+![Prototipo: 4 variantes de flujo](Prototipos\API_del_buscador_de_tarifas_202607241250.jpeg)
 
-*Interfaz de búsqueda principal con filtros laterales, chips de categoría y tarjetas de resultados con logos de operadores.*
+*Mosaico con cuatro variantes conceptuales del flujo de búsqueda: cuestionario guiado estilo OSIPTEL (V1), grid visual de tarjetas con filtro directo (V2), simulador de consumo real de datos (V3) y vista simplificada con trazabilidad del registro oficial (V4).*
 
-### Vista API — Endpoints y respuestas JSON
+### Mockups de landing page — Calculadora, Ahorro, Portal Oficial y Transparencia en Tiempo Real
 
-![Prototipo API](Prototipos/prototipo_api_logos.png)
+![Prototipo: variantes de página principal](Prototipos\API_de_buscador_de_tarifas_202607241251.jpeg)
 
-*Documentación interactiva del API con ejemplos de respuesta JSON, incluyendo el endpoint de logos de operadores.*
+*Cuatro propuestas de página principal: calculadora de consumo con planes ideales, buscador enfocado en ahorro y claridad, portal de acceso a información oficial del registro público, y panel de transparencia con tendencias de precio en tiempo real.*
 
-### Vista móvil — Comparador responsive
+### Mockups por módulo funcional — Cuestionario (A), Resultados (B), Comparador (C) y Observatorio Regulatorio (E)
 
-![Prototipo Móvil](Prototipos/prototipo_comparador_movil.png)
+![Prototipo: módulos funcionales](Prototipos\API_del_buscador_de_tarifas_202607241250 (1).jpeg)
 
-*Vista adaptada para dispositivos móviles con comparación de planes lado a lado y badges de mejor valor.*
+*Cuatro pantallas independientes por módulo: cuestionario de búsqueda guiada (Módulo A), grid de resultados con sliders de filtro (Módulo B), comparador lado a lado de planes (Módulo C) y dashboard del Observatorio Regulatorio con indicadores de calidad de datos (Módulo E).*
 
+### Wireframes de flujo completo — Landing (A), Resultados explicables (B), Comparación (C) y Búsqueda avanzada (D)
+
+![Prototipo: flujo completo de módulos A-D](Prototipos\API_del_buscador_de_tarifas_202607241250 (2).jpeg)
+
+*Cuatro pantallas del flujo completo etiquetadas como Versión 1 a 4: landing guiado "Encuentra tu plan ideal" (Módulo A), página de resultados con justificación de recomendación (Módulo B), pantalla de comparación detallada (Módulo C) y búsqueda avanzada para especialistas (Módulo D).*
 ---
 
 ## Buscador de logos de operadores
