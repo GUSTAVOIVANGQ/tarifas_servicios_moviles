@@ -117,6 +117,7 @@ Para agilizar el trabajo del equipo de Frontend y visualizar el producto final, 
 ![Prototipo: flujo completo de módulos A-D](Prototipos/API_del_buscador_de_tarifas_202607241250%20(2).jpeg)
 
 *El recorrido integral del usuario estructurado en cuatro etapas: la **landing guiada** ("Encuentra tu plan ideal"), la **página de resultados** con justificaciones algorítmicas de las recomendaciones, la **vista de comparación** detallada, y la interfaz de **búsqueda avanzada** para usuarios expertos.*
+
 ---
 
 ## Buscador de logos de operadores
