@@ -90,33 +90,33 @@ A continuación se listan los comparadores de tarifas de telecomunicaciones más
 
 ---
 
-## Prototipos de diseño
+## Prototipos de diseño (UI/UX)
 
-Los siguientes prototipos fueron generados con IA como punto de partida para la maquetación del equipo de Frontend.
+Para agilizar el trabajo del equipo de Frontend y visualizar el producto final, hemos generado los siguientes prototipos conceptuales utilizando IA. Estos mockups sirven como punto de partida para la maquetación e iteración del diseño.
 
-### Tablero comparativo de variantes — Cuestionario, Grid, Simulador y Trazabilidad
+### 1. Tablero comparativo de flujos de búsqueda
 
-![Prototipo: 4 variantes de flujo](Prototipos\API_del_buscador_de_tarifas_202607241250.jpeg)
+![Prototipo: 4 variantes de flujo](Prototipos/API_del_buscador_de_tarifas_202607241250.jpeg)
 
-*Mosaico con cuatro variantes conceptuales del flujo de búsqueda: cuestionario guiado estilo OSIPTEL (V1), grid visual de tarjetas con filtro directo (V2), simulador de consumo real de datos (V3) y vista simplificada con trazabilidad del registro oficial (V4).*
+*Un mosaico que explora cuatro alternativas para el flujo de búsqueda de tarifas: un **cuestionario guiado** paso a paso (V1), un **grid visual** de tarjetas con filtros rápidos (V2), un **simulador** basado en consumo real de datos (V3) y una **vista simplificada** orientada a la trazabilidad y datos oficiales (V4).*
 
-### Mockups de landing page — Calculadora, Ahorro, Portal Oficial y Transparencia en Tiempo Real
+### 2. Variantes para la Landing Page
 
-![Prototipo: variantes de página principal](Prototipos\API_de_buscador_de_tarifas_202607241251.jpeg)
+![Prototipo: variantes de página principal](Prototipos/API_de_buscador_de_tarifas_202607241251.jpeg)
 
-*Cuatro propuestas de página principal: calculadora de consumo con planes ideales, buscador enfocado en ahorro y claridad, portal de acceso a información oficial del registro público, y panel de transparencia con tendencias de precio en tiempo real.*
+*Cuatro conceptos distintos para la página principal: una **calculadora de consumo** para encontrar el plan ideal, un **buscador directo** enfocado en el ahorro, un **portal oficial** para acceder fácilmente al registro público, y un **panel de transparencia** que muestra tendencias de precios en tiempo real.*
 
-### Mockups por módulo funcional — Cuestionario (A), Resultados (B), Comparador (C) y Observatorio Regulatorio (E)
+### 3. Diseño por módulos funcionales
 
-![Prototipo: módulos funcionales](Prototipos\API_del_buscador_de_tarifas_202607241250 (1).jpeg)
+![Prototipo: módulos funcionales](Prototipos/API_del_buscador_de_tarifas_202607241250%20(1).jpeg)
 
-*Cuatro pantallas independientes por módulo: cuestionario de búsqueda guiada (Módulo A), grid de resultados con sliders de filtro (Módulo B), comparador lado a lado de planes (Módulo C) y dashboard del Observatorio Regulatorio con indicadores de calidad de datos (Módulo E).*
+*Detalle de pantallas individuales divididas por módulo: la interfaz del **cuestionario interactivo** (Módulo A), la **vista de resultados** con sliders para ajustes dinámicos (Módulo B), la herramienta de **comparación de planes** lado a lado (Módulo C) y el **dashboard analítico** del Observatorio Regulatorio (Módulo E).*
 
-### Wireframes de flujo completo — Landing (A), Resultados explicables (B), Comparación (C) y Búsqueda avanzada (D)
+### 4. Wireframes del flujo de usuario completo
 
-![Prototipo: flujo completo de módulos A-D](Prototipos\API_del_buscador_de_tarifas_202607241250 (2).jpeg)
+![Prototipo: flujo completo de módulos A-D](Prototipos/API_del_buscador_de_tarifas_202607241250%20(2).jpeg)
 
-*Cuatro pantallas del flujo completo etiquetadas como Versión 1 a 4: landing guiado "Encuentra tu plan ideal" (Módulo A), página de resultados con justificación de recomendación (Módulo B), pantalla de comparación detallada (Módulo C) y búsqueda avanzada para especialistas (Módulo D).*
+*El recorrido integral del usuario estructurado en cuatro etapas: la **landing guiada** ("Encuentra tu plan ideal"), la **página de resultados** con justificaciones algorítmicas de las recomendaciones, la **vista de comparación** detallada, y la interfaz de **búsqueda avanzada** para usuarios expertos.*
 ---
 
 ## Buscador de logos de operadores
