@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exito_y_Benchmarking_Internacional_de_Comparadores_de_Tarifas_de_Telecomunicaciones.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*
+
+Arduino® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #FFFFFF;
+}
+
+.hljs,
+.hljs-subst {
+  color: #434f54;
+}
+
+.hljs-keyword,
+.hljs-attribute,
+.hljs-selector-tag,
+.hljs-doctag,
+.hljs-name {
+  color: #00979D;
+}
+
+.hljs-built_in,
+.hljs-literal,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
+  color: #D35400;
+}
+
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #00979D;
+}
+
+.hljs-type,
+.hljs-string,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #005C5F;
+}
+
+.hljs-title,
+.hljs-section {
+  color: #880000;
+  font-weight: bold;
+}
+
+.hljs-comment {
+  color: rgba(149,165,166,.8);
+}
+
+.hljs-meta-keyword {
+  color: #728E00;
+}
+
+.hljs-meta {
+  color: #434f54;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-function {
+  color: #728E00;
+}
+
+.hljs-number {
+  color: #8A7B52;  
+}
+
+</style>
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family:   "HelveticaNeue-Light", sans-serif, "宋体","Segoe WPC", "Segoe UI", "SFUIText-Light","Droid Sans Fallback";
+	font-size: 18px;
+	padding: 0 12px;
+	line-height: 1.6;
+	word-wrap: break-word;
+	color: #333333;
+}
+
+.content-wrapper{
+	max-width: 860px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom: 1px solid #eee;
+}
+
+
+h2{
+	padding-bottom: .3em;
+    font-size: 2em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+h3{
+	font-size: 1.75em;
+    line-height: 1.225;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Obsidian syntax defaults for legacy export (PDF / HTML / DOCX) */
+
+.callout {
+	--callout-accent: #0969da;
+	margin: 12px 0;
+	border-radius: 6px;
+	border-left: 4px solid var(--callout-accent);
+	background: rgba(9, 105, 218, 0.08);
+	color: #333333;
+	overflow: hidden;
+}
+
+.callout[data-callout="note"],
+.callout[data-callout="abstract"],
+.callout[data-callout="info"],
+.callout[data-callout="todo"],
+.callout[data-subtype="note"],
+.callout[data-subtype="abstract"],
+.callout[data-subtype="info"],
+.callout[data-subtype="todo"],
+.callout[data-callout="note" i],
+.callout[data-callout="abstract" i],
+.callout[data-callout="info" i],
+.callout[data-callout="todo" i],
+.callout[data-subtype="note" i],
+.callout[data-subtype="abstract" i],
+.callout[data-subtype="info" i],
+.callout[data-subtype="todo" i] {
+	--callout-accent: #0969da;
+	border-left-color: #0969da;
+	background: rgba(9, 105, 218, 0.08);
+}
+
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-subtype="tip"],
+.callout[data-subtype="hint"],
+.callout[data-callout="tip" i],
+.callout[data-callout="hint" i],
+.callout[data-subtype="tip" i],
+.callout[data-subtype="hint" i] {
+	--callout-accent: #116329;
+	border-left-color: #116329;
+	background: rgba(17, 99, 41, 0.08);
+}
+
+.callout[data-callout="important"],
+.callout[data-subtype="important"],
+.callout[data-callout="important" i],
+.callout[data-subtype="important" i] {
+	--callout-accent: #8250df;
+	border-left-color: #8250df;
+	background: rgba(130, 80, 223, 0.08);
+}
+
+.callout[data-callout="warning"],
+.callout[data-subtype="warning"],
+.callout[data-callout="warning" i],
+.callout[data-subtype="warning" i] {
+	--callout-accent: #bc4c00;
+	border-left-color: #bc4c00;
+	background: rgba(188, 76, 0, 0.08);
+}
+
+.callout[data-callout="caution"],
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"],
+.callout[data-callout="fail"],
+.callout[data-subtype="caution"],
+.callout[data-subtype="danger"],
+.callout[data-subtype="error"],
+.callout[data-subtype="bug"],
+.callout[data-subtype="fail"],
+.callout[data-callout="caution" i],
+.callout[data-callout="danger" i],
+.callout[data-callout="error" i],
+.callout[data-callout="bug" i],
+.callout[data-callout="fail" i],
+.callout[data-subtype="caution" i],
+.callout[data-subtype="danger" i],
+.callout[data-subtype="error" i],
+.callout[data-subtype="bug" i],
+.callout[data-subtype="fail" i] {
+	--callout-accent: #cf222e;
+	border-left-color: #cf222e;
+	background: rgba(207, 34, 46, 0.08);
+}
+
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"],
+.callout[data-subtype="question"],
+.callout[data-subtype="help"],
+.callout[data-subtype="faq"],
+.callout[data-callout="question" i],
+.callout[data-callout="help" i],
+.callout[data-callout="faq" i],
+.callout[data-subtype="question" i],
+.callout[data-subtype="help" i],
+.callout[data-subtype="faq" i] {
+	--callout-accent: #9a6700;
+	border-left-color: #9a6700;
+	background: rgba(154, 103, 0, 0.08);
+}
+
+.callout .callout-title,
+.callout .callout-info {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 14px 0;
+	margin-bottom: 10px;
+	color: var(--callout-accent);
+}
+
+.callout .callout-title-icon,
+.callout .callout-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 16px;
+	height: 16px;
+	flex-shrink: 0;
+	color: var(--callout-accent);
+}
+
+.callout .callout-title-icon svg {
+	width: 16px;
+	height: 16px;
+}
+
+.callout .callout-title-inner,
+.callout .callout-info > .callout-title {
+	font-weight: 700;
+	font-size: 0.95em;
+	line-height: 1.35;
+	color: var(--callout-accent);
+}
+
+.callout .callout-content {
+	padding: 6px 14px 12px;
+	color: #333333;
+}
+
+.callout .callout-content > :first-child {
+	margin-top: 0;
+}
+
+.callout .callout-content > :last-child {
+	margin-bottom: 0;
+}
+
+.obsidian-wikilink {
+	color: #7c3aed;
+	text-decoration: underline;
+}
+
+.obsidian-wikilink-embed {
+	display: inline-block;
+	padding: 2px 8px;
+	border: 1px dashed #d0d7de;
+	border-radius: 4px;
+	color: #7c3aed;
+}
+
+.obsidian-tag {
+	color: #7c3aed;
+	background: rgba(124, 58, 237, 0.12);
+	border-radius: 4px;
+	padding: 0 4px;
+}
+
+mark {
+	background: rgba(154, 103, 0, 0.35);
+	color: inherit;
+	padding: 0 2px;
+	border-radius: 2px;
+}
+
+[data-type="yaml-front-matter"] {
+	margin: 0 0 16px;
+}
+
+.vditor-properties {
+	border: 1px solid #d0d7de;
+	border-radius: 8px;
+	background: #f6f8fa;
+	overflow: hidden;
+}
+
+.vditor-properties__heading {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 12px;
+	border-bottom: 1px solid #d0d7de;
+	background: #f3f4f6;
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: #6b7280;
+}
+
+.vditor-properties__heading-icon::before {
+	content: "☰";
+	opacity: 0.75;
+}
+
+.vditor-properties__table {
+	display: flex;
+	flex-direction: column;
+}
+
+.vditor-properties__row {
+	display: grid;
+	grid-template-columns: minmax(120px, 34%) 1fr;
+	gap: 8px 12px;
+	align-items: start;
+	padding: 8px 12px;
+	border-top: 1px solid rgba(208, 215, 222, 0.45);
+}
+
+.vditor-properties__row:first-child {
+	border-top: none;
+}
+
+.vditor-properties__key {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	min-width: 0;
+	color: #6b7280;
+	font-size: 0.85rem;
+}
+
+.vditor-properties__key-icon {
+	flex-shrink: 0;
+	width: 14px;
+	height: 14px;
+	opacity: 0.72;
+	text-align: center;
+}
+
+.vditor-properties__key-icon[data-icon="tag"]::before { content: "#"; }
+.vditor-properties__key-icon[data-icon="alias"]::before { content: "⛓"; }
+.vditor-properties__key-icon[data-icon="date"]::before { content: "📅"; }
+.vditor-properties__key-icon[data-icon="toggle"]::before { content: "◉"; }
+.vditor-properties__key-icon[data-icon="number"]::before { content: "#"; }
+.vditor-properties__key-icon[data-icon="list"]::before { content: "≡"; }
+.vditor-properties__key-icon[data-icon="text"]::before { content: "T"; }
+
+.vditor-properties__key-label {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.vditor-properties__value {
+	min-width: 0;
+	font-size: 0.92rem;
+	color: #333333;
+	word-break: break-word;
+}
+
+.vditor-properties__value--tags,
+.vditor-properties__value--aliases {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.vditor-properties__value--aliases {
+	gap: 6px;
+}
+
+.vditor-properties__list {
+	margin: 0;
+	padding-left: 1.1rem;
+}
+
+.vditor-properties__checkbox {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin-right: 6px;
+	border: 1px solid #d0d7de;
+	border-radius: 3px;
+	vertical-align: -2px;
+	background: #ffffff;
+}
+
+.vditor-properties__checkbox[is-checked="true"] {
+	background: #7c3aed;
+	border-color: #7c3aed;
+	box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.vditor-properties__empty {
+	opacity: 0.45;
+}
+
+</style>
+
+<style>
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+.table-of-contents li{
+	list-style-type: initial;
+}
+
+</style>
+
+<style>
+@font-face{font-display:block;font-family:KaTeX_AMS;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_AMS-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_AMS-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_AMS-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Caligraphic;font-style:normal;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Bold.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Bold.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Bold.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Caligraphic;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Caligraphic-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Fraktur;font-style:normal;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Bold.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Bold.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Bold.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Fraktur;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Fraktur-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Main;font-style:normal;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Bold.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Bold.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Bold.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Main;font-style:italic;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-BoldItalic.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-BoldItalic.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-BoldItalic.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Main;font-style:italic;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Italic.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Italic.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Italic.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Main;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Main-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Math;font-style:italic;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-BoldItalic.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-BoldItalic.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-BoldItalic.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Math;font-style:italic;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-Italic.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-Italic.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Math-Italic.ttf") format("truetype")}@font-face{font-display:block;font-family:"KaTeX_SansSerif";font-style:normal;font-weight:700;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Bold.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Bold.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Bold.ttf") format("truetype")}@font-face{font-display:block;font-family:"KaTeX_SansSerif";font-style:italic;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Italic.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Italic.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Italic.ttf") format("truetype")}@font-face{font-display:block;font-family:"KaTeX_SansSerif";font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_SansSerif-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Script;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Script-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Script-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Script-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Size1;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size1-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size1-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size1-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Size2;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size2-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size2-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size2-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Size3;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size3-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size3-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size3-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Size4;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size4-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size4-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Size4-Regular.ttf") format("truetype")}@font-face{font-display:block;font-family:KaTeX_Typewriter;font-style:normal;font-weight:400;src:url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Typewriter-Regular.woff2") format("woff2"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Typewriter-Regular.woff") format("woff"),url("https://cdn.jsdelivr.net/npm/katex@0.16.2/dist/fonts/KaTeX_Typewriter-Regular.ttf") format("truetype")}.katex{font:normal 1.21em KaTeX_Main,Times New Roman,serif;line-height:1.2;position:relative;text-indent:0;text-rendering:auto}.katex *{-ms-high-contrast-adjust:none!important;border-color:currentColor}.katex .katex-version:after{content:"0.16.47"}.katex .katex-mathml{border:0;-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;overflow:hidden;padding:0;position:absolute;width:1px}.katex .katex-html>.newline{display:block}.katex .base{position:relative;white-space:nowrap;width:-webkit-min-content;width:-moz-min-content;width:min-content}.katex .base,.katex .strut{display:inline-block}.katex .textbf{font-weight:700}.katex .textit{font-style:italic}.katex .textrm{font-family:KaTeX_Main}.katex .textsf{font-family:KaTeX_SansSerif}.katex .texttt{font-family:KaTeX_Typewriter}.katex .mathnormal{font-family:KaTeX_Math;font-style:italic}.katex .mathit{font-family:KaTeX_Main;font-style:italic}.katex .mathrm{font-style:normal}.katex .mathbf{font-family:KaTeX_Main;font-weight:700}.katex .boldsymbol{font-family:KaTeX_Math;font-style:italic;font-weight:700}.katex .amsrm,.katex .mathbb,.katex .textbb{font-family:KaTeX_AMS}.katex .mathcal{font-family:KaTeX_Caligraphic}.katex .mathfrak,.katex .textfrak{font-family:KaTeX_Fraktur}.katex .mathboldfrak,.katex .textboldfrak{font-family:KaTeX_Fraktur;font-weight:700}.katex .mathtt{font-family:KaTeX_Typewriter}.katex .mathscr,.katex .textscr{font-family:KaTeX_Script}.katex .mathsf,.katex .textsf{font-family:KaTeX_SansSerif}.katex .mathboldsf,.katex .textboldsf{font-family:KaTeX_SansSerif;font-weight:700}.katex .mathitsf,.katex .mathsfit,.katex .textitsf{font-family:KaTeX_SansSerif;font-style:italic}.katex .mainrm{font-family:KaTeX_Main;font-style:normal}.katex .vlist-t{border-collapse:collapse;display:inline-table;table-layout:fixed}.katex .vlist-r{display:table-row}.katex .vlist{display:table-cell;position:relative;vertical-align:bottom}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist>span>.pstrut{overflow:hidden;width:0}.katex .vlist-t2{margin-right:-2px}.katex .vlist-s{display:table-cell;font-size:1px;min-width:2px;vertical-align:bottom;width:2px}.katex .vbox{align-items:baseline;display:inline-flex;flex-direction:column}.katex .hbox{width:100%}.katex .hbox,.katex .thinbox{display:inline-flex;flex-direction:row}.katex .thinbox{max-width:0;width:0}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline,.katex .hline,.katex .mfrac .frac-line,.katex .overline .overline-line,.katex .rule,.katex .underline .underline-line{min-height:1px}.katex .mspace{display:inline-block}.katex .smash{display:inline;line-height:0}.katex .clap,.katex .llap,.katex .rlap{position:relative;width:0}.katex .clap>.inner,.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .clap>.fix,.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .clap>.inner,.katex .rlap>.inner{left:0}.katex .clap>.inner>span{margin-left:-50%;margin-right:50%}.katex .rule{border:0 solid;display:inline-block;position:relative}.katex .hline,.katex .overline .overline-line,.katex .underline .underline-line{border-bottom-style:solid;display:inline-block;width:100%}.katex .hdashline{border-bottom-style:dashed;display:inline-block;width:100%}.katex .sqrt>.root{margin-left:.2777777778em;margin-right:-.5555555556em}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.2em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:3.456em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.148em}.katex .fontsize-ensurer.reset-size1.size11,.katex .sizing.reset-size1.size11{font-size:4.976em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.8333333333em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.1666666667em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.3333333333em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.5em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.6666666667em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.4em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.88em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.4566666667em}.katex .fontsize-ensurer.reset-size2.size11,.katex .sizing.reset-size2.size11{font-size:4.1466666667em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.7142857143em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.8571428571em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.1428571429em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.2857142857em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.4285714286em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.7142857143em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.0571428571em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.4685714286em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:2.9628571429em}.katex .fontsize-ensurer.reset-size3.size11,.katex .sizing.reset-size3.size11{font-size:3.5542857143em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.75em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.875em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.125em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.25em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.5em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.8em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.16em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.5925em}.katex .fontsize-ensurer.reset-size4.size11,.katex .sizing.reset-size4.size11{font-size:3.11em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.5555555556em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.6666666667em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.7777777778em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.8888888889em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.1111111111em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.3333333333em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.6em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:1.92em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.3044444444em}.katex .fontsize-ensurer.reset-size5.size11,.katex .sizing.reset-size5.size11{font-size:2.7644444444em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.6em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.7em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.8em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.9em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.728em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.074em}.katex .fontsize-ensurer.reset-size6.size11,.katex .sizing.reset-size6.size11{font-size:2.488em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.4166666667em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.5em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.5833333333em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.6666666667em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.75em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.8333333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.2em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.44em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.7283333333em}.katex .fontsize-ensurer.reset-size7.size11,.katex .sizing.reset-size7.size11{font-size:2.0733333333em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.3472222222em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.4166666667em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.4861111111em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.5555555556em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.625em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.6944444444em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.8333333333em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.2em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.4402777778em}.katex .fontsize-ensurer.reset-size8.size11,.katex .sizing.reset-size8.size11{font-size:1.7277777778em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.2893518519em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.3472222222em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.4050925926em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.462962963em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.5208333333em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.5787037037em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.6944444444em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.8333333333em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.2002314815em}.katex .fontsize-ensurer.reset-size9.size11,.katex .sizing.reset-size9.size11{font-size:1.4398148148em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.2410800386em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.2892960463em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.337512054em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.3857280617em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.4339440694em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.4821600771em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.5785920926em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.6943105111em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.8331726133em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .fontsize-ensurer.reset-size10.size11,.katex .sizing.reset-size10.size11{font-size:1.1996142719em}.katex .fontsize-ensurer.reset-size11.size1,.katex .sizing.reset-size11.size1{font-size:.2009646302em}.katex .fontsize-ensurer.reset-size11.size2,.katex .sizing.reset-size11.size2{font-size:.2411575563em}.katex .fontsize-ensurer.reset-size11.size3,.katex .sizing.reset-size11.size3{font-size:.2813504823em}.katex .fontsize-ensurer.reset-size11.size4,.katex .sizing.reset-size11.size4{font-size:.3215434084em}.katex .fontsize-ensurer.reset-size11.size5,.katex .sizing.reset-size11.size5{font-size:.3617363344em}.katex .fontsize-ensurer.reset-size11.size6,.katex .sizing.reset-size11.size6{font-size:.4019292605em}.katex .fontsize-ensurer.reset-size11.size7,.katex .sizing.reset-size11.size7{font-size:.4823151125em}.katex .fontsize-ensurer.reset-size11.size8,.katex .sizing.reset-size11.size8{font-size:.578778135em}.katex .fontsize-ensurer.reset-size11.size9,.katex .sizing.reset-size11.size9{font-size:.6945337621em}.katex .fontsize-ensurer.reset-size11.size10,.katex .sizing.reset-size11.size10{font-size:.8336012862em}.katex .fontsize-ensurer.reset-size11.size11,.katex .sizing.reset-size11.size11{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .delimcenter,.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist-t,.katex .op-limits>.vlist-t{text-align:center}.katex .accent .accent-body{position:relative}.katex .accent .accent-body:not(.accent-full){width:0}.katex .overlay{display:block}.katex .mtable .vertical-separator{display:inline-block;min-width:1px}.katex .mtable .arraycolsep{display:inline-block}.katex .mtable .col-align-c>.vlist-t{text-align:center}.katex .mtable .col-align-l>.vlist-t{text-align:left}.katex .mtable .col-align-r>.vlist-t{text-align:right}.katex .svg-align{text-align:left}.katex svg{fill:currentColor;stroke:currentColor;display:block;height:inherit;position:absolute;width:100%}.katex svg path{stroke:none}.katex svg{fill-rule:nonzero;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1}.katex img{border-style:none;max-height:none;max-width:none;min-height:0;min-width:0}.katex .stretchy{display:block;overflow:hidden;position:relative;width:100%}.katex .stretchy:after,.katex .stretchy:before{content:""}.katex .hide-tail{overflow:hidden;position:relative;width:100%}.katex .halfarrow-left{left:0;overflow:hidden;position:absolute;width:50.2%}.katex .halfarrow-right{overflow:hidden;position:absolute;right:0;width:50.2%}.katex .brace-left{left:0;overflow:hidden;position:absolute;width:25.1%}.katex .brace-center{left:25%;overflow:hidden;position:absolute;width:50%}.katex .brace-right{overflow:hidden;position:absolute;right:0;width:25.1%}.katex .x-arrow-pad{padding:0 .5em}.katex .cd-arrow-pad{padding:0 .55556em 0 .27778em}.katex .mover,.katex .munder,.katex .x-arrow{text-align:center}.katex .boxpad{padding:0 .3em}.katex .fbox,.katex .fcolorbox{border:.04em solid;box-sizing:border-box}.katex .cancel-pad{padding:0 .2em}.katex .cancel-lap{margin-left:-.2em;margin-right:-.2em}.katex .sout{border-bottom-style:solid;border-bottom-width:.08em}.katex .angl{border-right:.049em solid;border-top:.049em solid;box-sizing:border-box;margin-right:.03889em}.katex .anglpad{padding:0 .03889em}.katex .eqn-num:before{content:"(" counter(katexEqnNo) ")";counter-increment:katexEqnNo}.katex .mml-eqn-num:before{content:"(" counter(mmlEqnNo) ")";counter-increment:mmlEqnNo}.katex .mtr-glue{width:50%}.katex .cd-vert-arrow{display:inline-block;position:relative}.katex .cd-label-left{display:inline-block;position:absolute;right:calc(50% + .3em);text-align:left}.katex .cd-label-right{display:inline-block;left:calc(50% + .3em);position:absolute;text-align:right}.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:block;text-align:center;white-space:nowrap}.katex-display>.katex>.katex-html{display:block;position:relative}.katex-display>.katex>.katex-html>.tag{position:absolute;right:0}.katex-display.leqno>.katex>.katex-html>.tag{left:0;right:auto}.katex-display.fleqn>.katex{padding-left:2em;text-align:left}body{counter-reset:katexEqnNo mmlEqnNo}
+
+</style>
+<style>
+body {
+    padding-top: 25px;
+}
+</style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <h1 id="an%C3%A1lisis-integral-del-ecosistema-global-de-transparencia-en-telecomunicaciones%3A-del-registro-regulatorio-a-la-experiencia-del-usuario-final" tabindex="-1"><strong>Análisis Integral del Ecosistema Global de Transparencia en Telecomunicaciones: Del Registro Regulatorio a la Experiencia del Usuario Final</strong></h1>
+<h2 id="introducci%C3%B3n-a-la-asimetr%C3%ADa-de-la-informaci%C3%B3n-en-las-telecomunicaciones" tabindex="-1"><strong>Introducción a la Asimetría de la Información en las Telecomunicaciones</strong></h2>
+<p>El desarrollo y la comercialización de los servicios de telecomunicaciones a nivel global se han caracterizado históricamente por una pronunciada asimetría de la información entre los proveedores de servicios y los consumidores finales. Durante décadas, la proliferación de planes tarifarios, paquetes combinados (single, doble y triple play), esquemas de datos estratificados y condiciones contractuales de alta complejidad generaron un entorno de mercado donde la toma de decisiones informada resultaba casi inalcanzable para el ciudadano promedio. Ante esta fricción económica, tanto las entidades reguladoras gubernamentales como actores del sector privado emprendieron el desarrollo de herramientas digitales destinadas a democratizar la información comercial.<br>
+El presente análisis evalúa de manera exhaustiva el origen, la evolución técnica, el impacto y el grado de éxito de las plataformas de registro y comparación de tarifas. Tomando como caso de estudio fundacional el Sistema Electrónico de Registro de Tarifas (SERT) y el Visor de Tarifas del Instituto Federal de Telecomunicaciones (IFT) en México, la investigación se expande para contrastar estas arquitecturas con herramientas homólogas de adopción masiva y rotundo éxito comercial y público. Este recorrido analítico abarca iniciativas estatales en América Latina, como los despliegues de OSIPTEL en Perú y la Comisión de Regulación de Comunicaciones (CRC) en Colombia, hasta llegar al sofisticado entorno europeo dominado por la simbiosis entre la Comisión Nacional de los Mercados y la Competencia (CNMC) y gigantes privados como Rastreator. Finalmente, el análisis disecciona el pináculo del volumen de tráfico global representado por consorcios como WhistleOut en mercados anglosajones, revelando cómo la transición de un enfoque puramente regulatorio hacia arquitecturas centradas en la experiencia del usuario (UX) ha redefinido el consumo de servicios de conectividad.</p>
+<h2 id="el-paradigma-mexicano%3A-de-la-comisi%C3%B3n-federal-de-telecomunicaciones-al-instituto-federal-de-telecomunicaciones" tabindex="-1"><strong>El Paradigma Mexicano: De la Comisión Federal de Telecomunicaciones al Instituto Federal de Telecomunicaciones</strong></h2>
+<p>Para comprender la magnitud del éxito y la profundidad de herramientas como el Visor de Tarifas, es imperativo analizar la evolución histórica de la regulación en México. En etapas anteriores, bajo el mandato de la extinta Comisión Federal de Telecomunicaciones (Cofetel), el registro de tarifas enfrentaba retos de opacidad y latencia. Los plazos para la inscripción en el registro de telecomunicaciones podían extenderse hasta sesenta días, un lapso excesivo que limitaba la atención al público y la agilidad del mercado1. En este periodo, las resoluciones tarifarias estaban fuertemente orientadas a la interconexión mayorista, donde la Cofetel determinaba tarifas mediante modelos de costos como el &quot;CILP+&quot; o debatía esquemas de &quot;bill-and-keep&quot; para mitigar externalidades y reducir las tarifas de terminación móvil (TTM), las cuales llegaban a superar los 1.09 pesos mexicanos por minuto2. El enfoque era casi exclusivamente interempresarial, dejando al consumidor final sin herramientas directas de visibilidad.<br>
+Con la reforma en materia de telecomunicaciones y la creación del Instituto Federal de Telecomunicaciones (IFT), el paradigma experimentó una transformación radical. El nuevo marco normativo estableció la obligación irrenunciable para los concesionarios y autorizados de presentar sus tarifas a los usuarios de manera electrónica y previo a su entrada en vigor, integrándolas al Registro Público de Concesiones (RPC)4.</p>
+<h3 id="el-sistema-electr%C3%B3nico-de-registro-de-tarifas-(sert)-y-el-visor-de-tarifas" tabindex="-1"><strong>El Sistema Electrónico de Registro de Tarifas (SERT) y el Visor de Tarifas</strong></h3>
+<p>Para instrumentalizar esta obligación, el IFT desarrolló el Sistema Electrónico de Registro de Tarifas (SERT), cuyo módulo principal entró en vigor en 2019 tras rigurosas fases de análisis, diseño y pruebas7. El SERT funciona como el mecanismo de <em>back-end</em> mediante el cual los operadores ingresan variables estandarizadas: denominación de la tarifa, servicios incluidos, ámbito geográfico de aplicación, plazos de vigencia y penalidades6. Una vez inscrita y dotada de un folio electrónico y constancia de inscripción, la tarifa se publica de inmediato, logrando tiempos de procesamiento que se redujeron a un solo día natural para miles de tarifas6.<br>
+El reflejo de este inmenso lago de datos hacia el consumidor y la industria es el Visor de Tarifas (tarifas.ift.org.mx)10. El éxito de esta plataforma no se mide bajo las métricas tradicionales de viralidad en internet, sino en su absoluta exhaustividad técnica, su rigor legal y su capacidad para garantizar condiciones de competencia económica. Constituye una herramienta invaluable para analistas, autoridades de competencia y los propios competidores del sector.<br>
+A nivel de interfaz y arquitectura de la información, el Visor de Tarifas permite una hipersegmentación sin precedentes. Los usuarios e investigadores pueden segmentar la búsqueda geográfica a nivel de estado, municipio y localidad específica11. A nivel de producto, la plataforma desglosa las variables con extrema granularidad. En telefonía móvil, permite filtrar por intervalos exactos de minutos (ej. 0 a 200, 200 a 500, ilimitado), segundos, mensajes de texto y capacidad de datos incluida, abarcando desde rangos mínimos de 0 a 100 MB hasta umbrales superiores a los 10 GB11. Para la televisión de paga, la herramienta discrimina entre canales de alta definición (HD) y canales de definición estándar, además de especificar el número de televisores incluidos en la mensualidad11. Tratándose de internet fijo, parametriza velocidades mínimas y máximas, segmentando detalladamente las velocidades de subida y de bajada desde rangos de 1 Mbps hasta conexiones simétricas o asimétricas superiores a los 100 Mbps11.<br>
+A pesar de ser un triunfo en materia de regulación colaborativa y técnica, que consolida al IFT como un regulador de quinta generación (G5) enfocado en decisiones basadas en evidencia y datos técnicos12, la interfaz del Visor de Tarifas presentaba inherentes barreras cognitivas para el usuario final no especializado. Su diseño legalista, ideado para reflejar fielmente los contratos depositados en el Registro Público, generaba una carga cognitiva elevada para el ciudadano promedio que simplemente buscaba contratar un servicio para su hogar.</p>
+<h3 id="la-capa-de-interacci%C3%B3n-final%3A-el-comparador-de-servicios-de-telecomunicaciones" tabindex="-1"><strong>La Capa de Interacción Final: El Comparador de Servicios de Telecomunicaciones</strong></h3>
+<p>Consciente de esta brecha de usabilidad, el IFT desarrolló una capa superior de interacción orientada exclusivamente al consumidor: el Comparador de Servicios de Telecomunicaciones y el Comparador de Planes de Telefonía Móvil13. Estas herramientas actúan como sintetizadores, extrayendo los datos duros del SERT y presentándolos mediante una interfaz gráfica digerible, donde el usuario visualiza los servicios móviles y fijos en sus modalidades <em>single, doble</em> y <em>triple play</em>.<br>
+El éxito y la popularidad de esta iniciativa son contundentes y cuantificables. Desde su lanzamiento hasta el 31 de diciembre de 2020, el Comparador de Servicios de Telecomunicaciones registró 560,195 consultas directas16. Paralelamente, el Comparador de Equipos Terminales Móviles—una herramienta complementaria que permite contrastar los dispositivos ofrecidos por los concesionarios vinculándolos con características de hardware y esquemas de prepago y pospago—alcanzó 132,136 visitas en el mismo periodo16.<br>
+La robustez metodológica y el impacto social de estas plataformas mexicanas han sido merecedores de reconocimientos internacionales de primer nivel. El IFT fue galardonado por la Unión Internacional de Telecomunicaciones (UIT) con el &quot;Reconocimiento por el Comparador de tarifas de telecomunicaciones en favor de los usuarios&quot;, además de obtener los primeros lugares en el concurso anual de Buenas Prácticas otorgado por el Foro Latinoamericano de Entes Reguladores en Telecomunicaciones (REGULATEL), destacando también sus plataformas hermanas como &quot;Soy Usuario&quot;17.</p>
+<h2 id="el-valor-anal%C3%ADtico-del-registro-p%C3%BAblico%3A-trazabilidad-y-evoluci%C3%B3n-del-mercado" tabindex="-1"><strong>El Valor Analítico del Registro Público: Trazabilidad y Evolución del Mercado</strong></h2>
+<p>El éxito profundo de la infraestructura creada por el IFT (SERT y Visor de Tarifas) reside en su capacidad para generar series de tiempo y bases de datos abiertas que permiten diagnosticar la salud competitiva del país. Al compilar meticulosamente cada tarifa con su folio y fecha de inscripción, el Instituto publica reportes anuales de &quot;Evolución de Planes y Tarifas&quot; que exponen la comoditización del ancho de banda y la mejora drástica en el bienestar del consumidor.<br>
+La evidencia documental extraída de los reportes del IFT demuestra una evolución tecnológica acelerada, evidenciando cómo las obligaciones de transparencia empujan a los operadores a mejorar sus ofertas comerciales. En el ámbito del internet fijo en modalidad <em>single play</em>, mientras que en 2018 apenas el 22% de los planes incluían velocidades superiores a los 50 Mbps, para el año 2024 el 100% de los planes analizados en el segmento no residencial superaban dicho umbral21. Asimismo, la velocidad máxima ofertada pasó de 200 Mbps en 2018 a rangos de hasta 1,000 Mbps en la actualidad21.<br>
+Esta trazabilidad permite documentar la convergencia de servicios. Los reportes recientes del IFT subrayan que el mercado de telecomunicaciones fijas (doble y triple play) ha integrado intrínsecamente plataformas de contenidos audiovisuales por internet (Over-The-Top u OTT). Para 2023, el 42% de los planes doble play y el 65% de los triple play ya incluían al menos una plataforma OTT, siendo Netflix la más predominante, presente en el 34% de los planes doble play y en el 56% de los triple play22. El Visor de Tarifas indexa meticulosamente estas variaciones; por ejemplo, registrando folios de tarifas específicas (como las tarifas 251532 y 532342 sin Netflix, frente a las tarifas 527881 y 527953 con Netflix) para evidenciar los diferenciales de precio23.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Servicio Fijo (Sector No Residencial)</th>
+<th style="text-align:left">Métrica / Variable de Oferta (2018)</th>
+<th style="text-align:left">Métrica / Variable de Oferta (2024)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Internet Single Play (Velocidad)</strong></td>
+<td style="text-align:left">22% de planes con más de 50 Mbps. Velocidad Máxima ofertada: 200 Mbps.</td>
+<td style="text-align:left">100% de planes con más de 50 Mbps. Velocidad Máxima ofertada: 750 Mbps.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Internet Single Play (Precio)</strong></td>
+<td style="text-align:left">Rentas mensuales entre <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>299</mn><mi>y</mi></mrow><annotation encoding="application/x-tex">299 y </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">299</span><span class="mord mathnormal" style="margin-right:0.0359em;">y</span></span></span></span>2,320 MXN.</td>
+<td style="text-align:left">Rentas mensuales entre <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>349</mn><mi>y</mi></mrow><annotation encoding="application/x-tex">349 y </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">349</span><span class="mord mathnormal" style="margin-right:0.0359em;">y</span></span></span></span>899 MXN.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Doble Play (Internet y Telefonía)</strong></td>
+<td style="text-align:left">40% de planes con más de 50 Mbps. El 73% incluía llamadas ilimitadas.</td>
+<td style="text-align:left">87% de planes con más de 50 Mbps. El 78% incluye llamadas ilimitadas. Velocidad Máxima: 1,000 Mbps.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Triple Play (Doble Play + TV)</strong></td>
+<td style="text-align:left">43% de planes con más de 50 Mbps. Canales: Mínimo 19, Máximo 186.</td>
+<td style="text-align:left">90% de planes con más de 50 Mbps. Canales: Mínimo 57, Máximo 201.</td>
+</tr>
+</tbody>
+</table>
+<p>Esta vasta recolección de información abarca también el mercado móvil, capturando la disrupción generada por los Operadores Móviles Virtuales (OMV). Mientras que los operadores tradicionales mantienen rentas de pospago entre 199 y 1,499 pesos24, el registro documenta cómo los OMVs ofrecen paquetes de agresiva competitividad tarifaria. Los datos revelan ofertas como las de &quot;Newww&quot;, que inscribe tarifas de 103.1 GB para consumo en redes sociales por apenas 135 pesos25, o promociones de doble de gigabytes (GB) en paquetes de prepago de operadores como &quot;Telmovil&quot; (con folios de registro IFT como 1836520 y 2162119), ofreciendo modalidades desde <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mi>h</mi><mi>a</mi><mi>s</mi><mi>t</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">100 hasta </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">100</span><span class="mord mathnormal">ha</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span></span></span></span>500 mensuales26. Toda esta data se consolida y publica en formatos de &quot;Datos Abiertos&quot; (CSV), permitiendo a académicos y desarrolladores independientes utilizar información curada y verificada directamente desde las entrañas del IFT28.</p>
+<h3 id="la-sinergia-institucional-y-la-defensa-del-consumidor%3A-profeco" tabindex="-1"><strong>La Sinergia Institucional y la Defensa del Consumidor: PROFECO</strong></h3>
+<p>El ecosistema de transparencia tarifaria en México trasciende las facultades exclusivas del IFT mediante la colaboración interinstitucional con la Procuraduría Federal del Consumidor (PROFECO). Reconociendo que el precio no es la única variable que afecta al consumidor, ambas instituciones lanzaron en junio de 2020 el &quot;Comparador de Contratos de Adhesión de Telecomunicaciones&quot;5.<br>
+Esta plataforma complementa al Comparador de Tarifas al permitir a los usuarios contrastar las obligaciones jurídicas subyacentes a la oferta comercial. A través de este portal, el usuario puede identificar las penalidades económicas estipuladas por cancelación anticipada, las garantías de los equipos terminales, los esquemas de financiamiento y la existencia de plazos forzosos autorizados y registrados ante la autoridad31. Esta iniciativa forma parte de un entorno más amplio de portales ciudadanos en México, que incluye aplicaciones móviles como &quot;Mi IFT&quot;, mapas interactivos de quejas (alimentados por el sistema &quot;Soy Usuario&quot;), herramientas de medición como &quot;Conoce Tu Velocidad&quot; y simuladores de consumo de datos15.<br>
+De manera paralela, PROFECO apalanca su histórico programa &quot;Quién es Quién en los Precios&quot;—una base de datos de consulta de precios minoristas con décadas de historia en México, datando desde 197736—para abarcar el sector tecnológico. Durante temporadas de alto consumo, como &quot;El Buen Fin&quot;, la plataforma Quién es Quién se adapta para permitir la comparación histórica de precios de equipos de audio, telefonía celular y televisores, graficando el comportamiento de las semanas previas para mitigar ofertas engañosas37. Además, la procuraduría emite comunicados comparativos respaldando la adopción de operadores móviles virtuales, destacando ofertas como las de CFE-Internet y Telmovil en el marco de sus evaluaciones de mercado26.</p>
+<h2 id="el-%C3%A9xito-masivo-en-am%C3%A9rica-latina%3A-identidad-y-agilidad-tecnol%C3%B3gica" tabindex="-1"><strong>El Éxito Masivo en América Latina: Identidad y Agilidad Tecnológica</strong></h2>
+<p>Si bien el IFT cimentó las bases de la transparencia técnica, otras entidades reguladoras en América Latina han diseñado arquitecturas tecnológicas y de marca que lograron una adopción masiva sin precedentes, superando el paradigma del &quot;repositorio legal&quot; para abrazar la usabilidad característica del comercio electrónico.</p>
+<h3 id="el-fen%C3%B3meno-osiptel-en-per%C3%BA%3A-el-ecosistema-%22checa-tu...%22" tabindex="-1"><strong>El Fenómeno OSIPTEL en Perú: El Ecosistema &quot;Checa tu...&quot;</strong></h3>
+<p>El Organismo Supervisor de Inversión Privada en Telecomunicaciones (OSIPTEL) de Perú representa uno de los referentes internacionales de mayor éxito en penetración ciudadana. Su plataforma tarifaria original, &quot;Comparatel&quot;, fue sometida a un profundo <em>rebranding</em> en 2021, transformándose en la plataforma &quot;Checa tu plan&quot;39. Este rediseño fue el pilar de un ecosistema integral que actualmente incluye herramientas como &quot;Checa tu IMEI&quot; (para verificar dispositivos robados o clonados), &quot;Checa tu señal&quot; y &quot;Checa tus líneas&quot;41.<br>
+Las métricas de adopción de OSIPTEL son extraordinarias. El comparador tarifario &quot;Checa tu plan&quot; (checatuplan.pe) reporta haber superado los 3,513,945 visitas acumuladas39. Este volumen masivo de consultas, especialmente considerando la densidad poblacional de Perú en contraste con México, demuestra un nivel de <em>engagement</em> excepcional.<br>
+A nivel técnico, la plataforma se alimenta del Sistema de Información y Registro de Tarifas (SIRT), el equivalente peruano del SERT39. El éxito radica en cómo procesa esta información de <em>backend</em>. La base de datos de &quot;Checa tu plan&quot; consolida información de 93 operadores de telecomunicaciones (abarcando operadores móviles, de internet y televisión de paga), gestionando más de 1,259 productos fijos (736 monoproductos, 470 doble play y decenas de triple play) y decenas de tarifas móviles actualizadas mensualmente39.<br>
+La tracción de la plataforma se fundamenta en tres vectores críticos de diseño:</p>
+<blockquote>
+<ol>
+<li><strong>Arquitectura de Marca y Lenguaje:</strong> La transición hacia un verbo coloquial (&quot;Checa&quot;) redujo la fricción de entrada, alejando a la herramienta de la estética punitiva o burocrática del gobierno y acercándola al lenguaje de las audiencias jóvenes40.</li>
+<li><strong>Interfaz Basada en Casos de Uso:</strong> En lugar de presentar formularios técnicos, la herramienta guía al usuario mediante preguntas directas como &quot;¿Qué plan te da más datos (Gigabytes) por menor precio?&quot; o &quot;¿Qué empresa te ofrece más velocidad por menor precio?&quot;39.</li>
+<li><strong>Herramientas de Autodiagnóstico:</strong> Incorpora calculadoras integradas donde el usuario introduce sus hábitos digitales para que el sistema sugiera la cantidad de datos o velocidad óptima antes de iniciar la comparativa comercial45.</li>
+</ol>
+</blockquote>
+<h3 id="la-soluci%C3%B3n-automatizada-de-la-crc-en-colombia%3A-el-web-scraping-institucional" tabindex="-1"><strong>La Solución Automatizada de la CRC en Colombia: El <em>Web Scraping</em> Institucional</strong></h3>
+<p>La Comisión de Regulación de Comunicaciones (CRC) en Colombia abordó el desafío de la asimetría de información desde una perspectiva metodológica y tecnológica diametralmente opuesta a los sistemas de México y Perú. En lugar de desarrollar un sistema de <em>backend</em> complejo donde los operadores deben iniciar un trámite burocrático para inscribir sus tarifas, la CRC implementó un Comparador de Planes y Tarifas (comparador.crcom.gov.co) fundamentado en tecnologías de extracción automatizada de datos, conocidas como <em>web scraping</em>46.<br>
+De acuerdo con el marco regulatorio colombiano, específicamente la Resolución CRC 5050 de 2016 (modificada por la Resolución CRC 6333 de 2021) y la Circular No. 134 de 2021, la obligación legal de los Prestadores de Redes y Servicios de Telecomunicaciones (PRST) consiste en publicar y mantener actualizada la información de sus planes tarifarios de manera clara en sus propias páginas web corporativas49. El comparador de la CRC ejecuta procesos diarios de recolección automatizada sobre estas páginas comerciales, poblando su base de datos con los resultados exactos que el consumidor vería en la tienda del proveedor47.<br>
+Este modelo de arquitectura descentralizada presenta dinámicas operativas singulares:</p>
+<ul>
+<li><strong>Capacidad de Escalamiento:</strong> Al automatizar la recolección, la herramienta procesa un volumen masivo de datos sin requerir validación humana previa. El comparador logra consolidar y exponer simultáneamente hasta 5,902 planes (considerando variaciones de prepago desde paquetes de 1 día, paquetes de minutos o uso exclusivo de redes sociales) según los filtros aplicados46.</li>
+<li><strong>Gestión de Responsabilidad Legal:</strong> Al actuar como un espejo tecnológico de los sitios de los operadores, la CRC establece en sus términos y condiciones que actúa exclusivamente como canal informativo. La entidad se exime de responsabilidad por información falsa, engañosa o imprecisa, trasladando toda la carga probatoria de publicidad engañosa hacia los PRST dueños de las páginas originales47.</li>
+<li><strong>Tráfico Orgánico Impuesto:</strong> La normativa colombiana exige que los propios operadores incorporen un enlace visible en sus portales web que dirija a los usuarios hacia el comparador oficial de la CRC, forzando la usabilidad de la herramienta en el ciclo de compra del cliente50.</li>
+</ul>
+<h2 id="el-ecosistema-europeo%3A-la-tensi%C3%B3n-entre-la-neutralidad-p%C3%BAblica-y-la-agresividad-comercial-privada" tabindex="-1"><strong>El Ecosistema Europeo: La Tensión entre la Neutralidad Pública y la Agresividad Comercial Privada</strong></h2>
+<p>En los mercados europeos, particularmente en España, la evolución de los comparadores expone claramente la dicotomía entre el rigor imparcial de las instituciones gubernamentales y la alta eficiencia en retención de usuarios del sector privado.</p>
+<h3 id="el-rol-normativo-y-de-transparencia-de-la-cnmc" tabindex="-1"><strong>El Rol Normativo y de Transparencia de la CNMC</strong></h3>
+<p>La Comisión Nacional de los Mercados y la Competencia (CNMC) desempeña un rol fundamental en la estandarización de información en España. En el sector de las telecomunicaciones, el regulador ha enfocado sus esfuerzos tecnológicos hacia mapas interactivos que revelan la calidad real de las conexiones. A través de bases cartográficas, los usuarios pueden consultar la velocidad de descarga en localizaciones específicas, evaluando coberturas de fibra y 5G de operadores como Movistar, Orange y Digi (quienes dominan la expansión de estas redes)51.<br>
+No obstante, el mayor esfuerzo comparativo ciudadano de la CNMC reside en el sector energético, cuyo modelo de transparencia es análogo al de las telecomunicaciones. La CNMC opera el Comparador de Ofertas de Energía y el Simulador de la Factura de Electricidad, diseñado para suministros bajo el Precio Voluntario para el Pequeño Consumidor (PVPC)52.<br>
+El principal activo del comparador de la CNMC es su neutralidad absoluta; al ser una entidad estatal, carece de incentivos comerciales o programas de afiliación, lo que garantiza resultados libres de sesgos hacia compañías específicas54. Permite incluso métodos avanzados de entrada de datos, como la lectura de códigos QR en facturas o la importación de consumos horarios54. Sin embargo, la plataforma sufre las debilidades características de las herramientas públicas: carece de asesoramiento proactivo para el consumidor, presenta problemas técnicos de estabilidad ocasionales (reportados en foros de opinión) y deposita una carga analítica excesiva en el usuario, obligándolo a descifrar la terminología de los términos de potencia y energía por sí mismo54.</p>
+<h3 id="la-consolidaci%C3%B3n-del-sector-privado%3A-rastreator-y-kelisto" tabindex="-1"><strong>La Consolidación del Sector Privado: Rastreator y Kelisto</strong></h3>
+<p>Allí donde la plataforma gubernamental exige esfuerzo técnico, el sector privado español ha prosperado comercializando la simplicidad extrema. Empresas como <em>Rastreator</em> y <em>Kelisto</em> lideran abrumadoramente las cuotas de tráfico en búsquedas orgánicas de tarifas telefónicas, internet y seguros.<br>
+El modelo de plataformas como Rastreator indexa las ofertas de más de 30 operadoras telefónicas (Vodafone, Orange, Finetwork, Jazztel, Yoigo) en tiempo real, operando bajo la premisa de ahorrar tiempo y maximizar los beneficios económicos del consumidor. Las estadísticas internas de estas plataformas afirman que sus usuarios ahorran un promedio de 104€ al migrar sus tarifas móviles mediante su sistema56. Asimismo, estudios sectoriales referenciados por estas herramientas analizan incluso la calidad de atención al cliente de los operadores, brindando al consumidor variables cualitativas más allá del precio (por ejemplo, valorando a Movistar con 73 puntos y a Jazztel con 69 en servicio al cliente)57.<br>
+El pilar de este éxito es su modelo de negocio basado en el marketing de afiliación (Lead Generation). El uso de la plataforma es completamente gratuito para el consumidor, ya que la monetización proviene de los operadores, quienes pagan una comisión a la plataforma cuando el usuario hace clic en los enlaces (&quot;Ver Oferta&quot;) o finaliza un contrato56. Esto genera un incentivo económico directo para que Rastreator y Kelisto inviertan presupuestos formidables en optimización de motores de búsqueda (SEO), pauta digital publicitaria (SEM) y en el diseño de interfaces de usuario (UX) que minimizan la fricción y maximizan la tasa de conversión, ocultando la densidad contractual tras diseños limpios y expansibles.<br>
+La eficiencia de este modelo es tal que Rastreator expandió sus operaciones hacia México a finales de 2017, replicando su motor de comparación para el mercado de seguros de automóviles60. La plataforma permite cotizar simultáneamente pólizas de más de una decena de aseguradoras (como GNP, AXA, Chubb, AIG) en escasos minutos, organizando los resultados desde el precio más bajo al más alto (ej. desde pólizas limitadas de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo separator="true">,</mo><mn>527</mn><mi>p</mi><mi>e</mi><mi>s</mi><mi>o</mi><mi>s</mi><mi>h</mi><mi>a</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>s</mi><mi>e</mi><mi>g</mi><mi>u</mi><mi>r</mi><mi>o</mi><mi>s</mi><mi>a</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>i</mi><mi>o</mi><mi>s</mi><mi>s</mi><mi>u</mi><mi>p</mi><mi>e</mi><mi>r</mi><mi>i</mi><mi>o</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>a</mi><mi>l</mi><mi>o</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">4,527 pesos hasta seguros amplios superiores a los </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">527</span><span class="mord mathnormal">p</span><span class="mord mathnormal">esos</span><span class="mord mathnormal">ha</span><span class="mord mathnormal">s</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span><span class="mord mathnormal">se</span><span class="mord mathnormal" style="margin-right:0.0359em;">g</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal">os</span><span class="mord mathnormal">am</span><span class="mord mathnormal" style="margin-right:0.0197em;">pl</span><span class="mord mathnormal">i</span><span class="mord mathnormal">oss</span><span class="mord mathnormal">u</span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.0278em;">er</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.0278em;">or</span><span class="mord mathnormal">es</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">os</span></span></span></span>13,000 pesos) y enfatizando la rapidez visual de la información60. Su posicionamiento compite con modelos de negocio directos (como <em>miituo</em>, que ofrece seguros de pago por kilómetro sin intermediarios), destacando el valor irremplazable de los comparadores agregadores: la reducción inmediata de la asimetría informativa en una sola ventana60.</p>
+<h2 id="el-c%C3%A9nit-del-tr%C3%A1fico-global-y-la-monetizaci%C3%B3n-estructural%3A-whistleout" tabindex="-1"><strong>El Cénit del Tráfico Global y la Monetización Estructural: WhistleOut</strong></h2>
+<p>Para identificar el límite superior del volumen de usuarios, la popularidad absoluta y el refinamiento comercial en el análisis de tarifas de telecomunicaciones, es necesario estudiar los ecosistemas anglosajones y plataformas transnacionales como <em>WhistleOut</em>.</p>
+<h3 id="penetraci%C3%B3n-de-mercado-y-vol%C3%BAmenes-de-interacci%C3%B3n" tabindex="-1"><strong>Penetración de Mercado y Volúmenes de Interacción</strong></h3>
+<p>WhistleOut opera con un dominio abrumador en los mercados de Estados Unidos y Australia, erigiéndose como la herramienta predilecta de millones de ciudadanos. Las métricas de interacción demuestran la viabilidad de plataformas de transparencia cuando se ejecutan con rigor corporativo:</p>
+<ul>
+<li><strong>Estados Unidos:</strong> La plataforma procesa y asiste a 3 millones de usuarios mensualmente, cruzando las necesidades de consumo con la oferta en tiempo real de 39 operadores (incluyendo los gigantes de la industria y docenas de Operadores Móviles Virtuales) para sugerir planes idóneos64.</li>
+<li><strong>Australia:</strong> Registra un tráfico anual de 7 millones de ciudadanos australianos y procesa activamente más de 5,000 migraciones o cambios de plan de internet o telefonía móvil al mes65. En esta geografía, reportan que el usuario promedio logra un ahorro de $160 dólares australianos tras la optimización de su plan65.</li>
+</ul>
+<h3 id="comportamiento-del-consumidor%3A-big-data-e-insights-de-mercado" tabindex="-1"><strong>Comportamiento del Consumidor: <em>Big Data</em> e Insights de Mercado</strong></h3>
+<p>El colosal volumen de tráfico que capta WhistleOut le permite generar inteligencia de mercado basada en <em>Big Data</em>, asumiendo un rol de investigador analítico que tradicionalmente corresponde a entidades gubernamentales. Sus reportes anuales exponen una monumental falla del mercado derivada de la falta de alfabetización digital de los consumidores y la agresiva estructura tarifaria de los principales operadores (los <em>Big 3</em> en Estados Unidos).<br>
+El análisis de WhistleOut expone que las familias estadounidenses desperdician un estimado de <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo separator="true">,</mo><mn>200</mn><mi>d</mi><mover accent="true"><mi>o</mi><mo>ˊ</mo></mover><mi>l</mi><mi>a</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>a</mi><mi>n</mi><mi>u</mi><mi>a</mi><mi>l</mi><mi>e</mi><mi>s</mi><mi>a</mi><mi>l</mi><mi>p</mi><mi>a</mi><mi>g</mi><mi>a</mi><mi>r</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>s</mi><mi>o</mi><mi>b</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>p</mi><mi>a</mi><mi>c</mi><mi>i</mi><mi>d</mi><mi>a</mi><mi>d</mi><mi>e</mi><mi>n</mi><mi>s</mi><mi>u</mi><mi>s</mi><mi>p</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>e</mi><mi>s</mi><mi>d</mi><mi>e</mi><mi>t</mi><mi>e</mi><mi>l</mi><mi>e</mi><mi>f</mi><mi>o</mi><mi>n</mi><mover accent="true"><mi mathvariant="normal">ı</mi><mo>ˊ</mo></mover><mi>a</mi><mi>m</mi><mover accent="true"><mi>o</mi><mo>ˊ</mo></mover><mi>v</mi><mi>i</mi><mi>l</mi><mn>66.</mn><mi>L</mi><mi>o</mi><mi>s</mi><mi>d</mi><mi>a</mi><mi>t</mi><mi>o</mi><mi>s</mi><mi>p</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>a</mi><mi>n</mi><mi>q</mi><mi>u</mi><mi>e</mi><mi>e</mi><mi>l</mi><mi>c</mi><mi>o</mi><mi>s</mi><mi>t</mi><mi>o</mi><mi>p</mi><mi>r</mi><mi>o</mi><mi>m</mi><mi>e</mi><mi>d</mi><mi>i</mi><mi>o</mi><mi>d</mi><mi>e</mi><mi>u</mi><mi>n</mi><mi>p</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>d</mi><mi>a</mi><mi>t</mi><mi>o</mi><mi>s</mi><mi>i</mi><mi>l</mi><mi>i</mi><mi>m</mi><mi>i</mi><mi>t</mi><mi>a</mi><mi>d</mi><mi>o</mi><mi>r</mi><mi>o</mi><mi>n</mi><mi>d</mi><mi>a</mi><mi>l</mi><mi>o</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">2,200 dólares anuales al pagar por sobrecapacidad en sus planes de telefonía móvil66. Los datos precisan que el costo promedio de un plan de datos ilimitado ronda los </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">200</span><span class="mord mathnormal">d</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">o</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">ˊ</span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal">es</span><span class="mord mathnormal">an</span><span class="mord mathnormal">u</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">es</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0359em;">g</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.0278em;">or</span><span class="mord mathnormal">so</span><span class="mord mathnormal">b</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal">ec</span><span class="mord mathnormal">a</span><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal">c</span><span class="mord mathnormal">i</span><span class="mord mathnormal">d</span><span class="mord mathnormal">a</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">s</span><span class="mord mathnormal">u</span><span class="mord mathnormal">s</span><span class="mord mathnormal" style="margin-right:0.0197em;">pl</span><span class="mord mathnormal">an</span><span class="mord mathnormal">es</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord latin_fallback">ı</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">ˊ</span></span></span></span></span></span></span><span class="mord mathnormal">am</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6944em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">o</span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1944em;"><span class="mord">ˊ</span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.0359em;">v</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord">66.</span><span class="mord mathnormal">L</span><span class="mord mathnormal">os</span><span class="mord mathnormal">d</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">os</span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal">ec</span><span class="mord mathnormal">i</span><span class="mord mathnormal">s</span><span class="mord mathnormal">an</span><span class="mord mathnormal" style="margin-right:0.0359em;">q</span><span class="mord mathnormal">u</span><span class="mord mathnormal">ee</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">cos</span><span class="mord mathnormal">t</span><span class="mord mathnormal">o</span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal">o</span><span class="mord mathnormal">m</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span><span class="mord mathnormal">o</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">u</span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.0197em;">pl</span><span class="mord mathnormal">an</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">os</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">imi</span><span class="mord mathnormal">t</span><span class="mord mathnormal">a</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.0278em;">or</span><span class="mord mathnormal">o</span><span class="mord mathnormal">n</span><span class="mord mathnormal">d</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">os</span></span></span></span>244 dólares mensuales por hogar (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo separator="true">,</mo><mn>928</mn><mi>a</mi><mi>l</mi><mi>a</mi><mover accent="true"><mi>n</mi><mo>~</mo></mover><mi>o</mi><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi><mi>P</mi><mi>a</mi><mi>r</mi><mi>a</mi><mi>l</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>e</mi><mo separator="true">,</mo><mi>e</mi><mi>l</mi><mn>59</mn></mrow><annotation encoding="application/x-tex">2,928 al año). Paralelamente, el 59% de los usuarios de una sola línea gastan en promedio </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">928</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">a</span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6679em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">n</span></span><span style="top:-3.35em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.25em;"><span class="mord">~</span></span></span></span></span></span></span><span class="mord mathnormal">o</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.1389em;">P</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0278em;">r</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal">am</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord">59</span></span></span></span>76 dólares al mes bajo los operadores principales, frente a los $44 dólares mensuales que gastan los usuarios de redes MVNO, dejando sobre la mesa miles de dólares en ahorros potenciales por desconocimiento de alternativas competitivas en la red66.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Patrones de Uso y Gasto (Reporte WhistleOut, EE.UU.)</th>
+<th style="text-align:left">Datos Estadísticos Documentados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Gasto Excesivo Familiar</strong></td>
+<td style="text-align:left">Desperdicio promedio de $2,200 dólares anuales por hogar. Afecta a más de 83 millones de hogares.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Gasto Promedio por Operador</strong></td>
+<td style="text-align:left">Operadores <em>Big 3</em>: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>76</mn><mi mathvariant="normal">/</mi><mi>m</mi><mi>e</mi><mi>s</mi><mo stretchy="false">(</mo></mrow><annotation encoding="application/x-tex">76/mes (</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">76/</span><span class="mord mathnormal">m</span><span class="mord mathnormal">es</span><span class="mopen">(</span></span></span></span>912/año). Operadores MVNO: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>44</mn><mi mathvariant="normal">/</mi><mi>m</mi><mi>e</mi><mi>s</mi><mo stretchy="false">(</mo></mrow><annotation encoding="application/x-tex">44/mes (</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">44/</span><span class="mord mathnormal">m</span><span class="mord mathnormal">es</span><span class="mopen">(</span></span></span></span>528/año).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Consumo Promedio de Datos</strong></td>
+<td style="text-align:left">24 GB por ciclo de facturación (Aplica tanto en EE. UU. como en Australia).</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Comportamiento Wi-Fi (Datos Ilimitados)</strong></td>
+<td style="text-align:left">El 64% de los usuarios con planes ilimitados depende casi exclusivamente de redes Wi-Fi en su día a día.</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Desconocimiento del Usuario</strong></td>
+<td style="text-align:left">El 23% de los usuarios no sabe cómo verificar su consumo mensual real de datos.</td>
+</tr>
+</tbody>
+</table>
+<p>Este volumen de datos arroja un insight de segundo orden revelador: &quot;la ilusión de la necesidad ilimitada&quot;. A pesar de que los proveedores impulsan masivamente planes sin límite, las métricas demuestran que el usuario de telefonía promedio consume 24.4 GB de datos al mes66. Más aún, las plataformas documentan que plataformas pesadas como Spotify, incluso en sus configuraciones de más alta fidelidad, consumen entre 10 MB (baja) y 132 MB (muy alta) por hora, lo que indica que planes de rango medio (15 a 20 GB) son matemáticamente suficientes para la vasta mayoría de la población67. La ignorancia sobre estas métricas (el 23% desconoce cómo revisar su consumo66) es la base de las ganancias extraordinarias de la industria.</p>
+<h3 id="arquitectura-tecnol%C3%B3gica-y-comercializaci%C3%B3n-de-audiencias-(b2b)" tabindex="-1"><strong>Arquitectura Tecnológica y Comercialización de Audiencias (B2B)</strong></h3>
+<p>El dominio de WhistleOut no obedece únicamente al marketing; está fundamentado en analítica del comportamiento digital (Experience Analytics). La organización emplea soluciones a nivel empresarial como <em>Contentsquare</em> para evaluar microscópicamente el comportamiento de los visitantes68. Esta tecnología supera el rastreo de clics tradicional, generando mapeos de calor, analizando el &quot;tiempo hasta el primer clic&quot; (time to first click), evaluando la tasa de exposición de elementos específicos del comparador y midiendo la frustración del usuario en los viajes complejos de conversión68. Cuando una búsqueda de planes resulta confusa, los algoritmos detectan la fricción, permitiendo a los ingenieros rediseñar la interfaz para guiar instintivamente al usuario hacia la solución, maximizando la retención68.<br>
+Desde la perspectiva de la monetización corporativa, el portal ha estructurado un embudo de ventas altamente lucrativo que comercializa visibilidad (espacios B2B) a las propias operadoras telefónicas, manteniendo al mismo tiempo la neutralidad en sus listados orgánicos (asegurando mostrar a las 10 mejores opciones reales siempre)64. Sus productos comerciales incluyen:</p>
+<ul>
+<li><strong>Posicionamiento Destacado (Featured Result):</strong> Las operadoras pujan por colocar su plan en la primera posición patrocinada, condicionada estrictamente a que el producto tenga una concordancia exacta con lo que el usuario está buscando64.</li>
+<li><strong>Ubicación Directa en Resultados (Search Results Placement):</strong> Integración de botones &quot;Ir al sitio&quot; (<em>go to site</em>) dentro de los resultados de búsqueda natural; generan altos niveles de conversión dado que el usuario ya ha invertido más de ocho minutos revisando las características dentro de WhistleOut64.</li>
+<li><strong>Exposición desde el Inicio y Cierre (Homepage &amp; Sticky Strip):</strong> Venta de espacios en banners principales para generación de marca inicial, así como anuncios anclados al pie de página (Sticky Strip) que persiguen la navegación del usuario64.</li>
+<li><strong>Remarketing de Audiencias &quot;In-Market&quot;:</strong> Aprovechando que sus visitantes tienen una intención de compra validada, WhistleOut comercializa servicios de publicidad rastreando a los usuarios que abandonan el portal y mostrando anuncios co-patrocinados en otros sitios de la web, utilizando modelos de supresión y audiencias similares (look-a-like audiences) sin violar las normativas al no vender los datos base a las operadoras64.</li>
+</ul>
+<h2 id="reflexiones-anal%C3%ADticas-y-conclusiones-del-estudio" tabindex="-1"><strong>Reflexiones Analíticas y Conclusiones del Estudio</strong></h2>
+<p>La síntesis de los distintos modelos de transparencia tarifaria—desde las aproximaciones del Estado regulador en América Latina hasta las maquinarias privadas de monetización en mercados anglosajones—revela dinámicas estructurales profundas sobre cómo la sociedad interactúa con la información técnica y económica.</p>
+<blockquote>
+<ol>
+<li><strong>La Tensión entre Exactitud Jurídica y Carga Cognitiva:</strong> Los sistemas estructurados bajo estrictos mandatos de registro legal, como el SERT y el Visor de Tarifas del IFT en México, priorizan de manera absoluta la precisión jurídica y el mantenimiento de un repositorio histórico inalterable6. Este enfoque previene el fraude, protege la integridad de los contratos y permite al Estado publicar auditorías invaluables sobre la salud de la industria4. Sin embargo, la interfaz resultante exige un conocimiento técnico previo por parte del ciudadano. En contraste, OSIPTEL demostró que desburocratizar la interacción mediante marcas afables (&quot;Checa tu plan&quot;) e integrar asistencia algorítmica previa (calculadoras de consumo) multiplica radicalmente la participación ciudadana y el alcance de las plataformas públicas39.</li>
+<li><strong>La Externalización del Mantenimiento de Datos y el Despliegue API:</strong> La metodología adoptada por la CRC colombiana insinúa una evolución crucial en la logística de datos regulatorios47. El requerimiento clásico de obligar a los operadores a registrar manualmente sus tarifas en los servidores del gobierno está siendo superado por tecnologías de recolección en tiempo real (<em>web scraping</em> o consumo de APIs). Trasladar la carga legal hacia el operador—obligándolo a que la tarifa comercial publicada en su sitio corporativo sea vinculante—y extraer esa información de manera automatizada elimina cuellos de botella administrativos y asegura una sincronización perfecta entre lo que ve el comprador en la tienda y lo que muestra el comparador estatal.</li>
+<li><strong>La Comoditización de los Datos y el Modelo Híbrido:</strong> Las empresas privadas triunfan porque las estrategias tarifarias de los operadores están diseñadas intencionalmente para dificultar la comparación. Al agrupar líneas adicionales, suscripciones a OTTs, minutos de roaming internacional y capacidades de <em>tethering</em>, los operadores ocultan el verdadero valor económico del byte23. Plataformas como WhistleOut, Kelisto o Rastreator actúan como traductores, reduciendo el ruido publicitario a un simple identificador de ahorro neto (ej. &quot;Ahorra $160 dólares&quot;)56. El consumidor no quiere comparar variables técnicas; quiere validar decisiones financieras.</li>
+</ol>
+</blockquote>
+<p>El ecosistema global más eficiente emerge entonces como un modelo simbiótico. El Estado (mediante instituciones como el IFT o la CNMC) asume el rol indispensable de &quot;verificador de la verdad&quot;, forzando la estandarización y disponibilidad de los datos en formatos abiertos, y vigilando la equidad contractual a través de registros inmutables (como PROFECO y sus comparadores de adhesión)8. Sobre esa base inalterable y veraz, el sector privado—impulsado por sus incentivos de afiliación—invierte los vastos recursos tecnológicos, de marketing (SEO, SEM) y de análisis conductual (UX Analytics) necesarios para atraer, retener y educar financieramente a las masas, mitigando así una asimetría informativa que, sin esta colaboración, seguiría generando pérdidas multimillonarias para los hogares del mundo.</p>
+<h4 id="works-cited" tabindex="-1"><strong>Works cited</strong></h4>
+<blockquote>
+<ol>
+<li>el sistema regulatorio de las telecomunicaciones y radiodifusión y su relación con los poderes de la un - bibliodigitalibd@senado.gob.mx, <a href="http://bibliodigitalibd.senado.gob.mx/bitstream/handle/123456789/1774/sis_reg_tel.pdf?sequence=1&amp;isAllowed=y">http://bibliodigitalibd.senado.gob.mx/bitstream/handle/123456789/1774/sis_reg_tel.pdf?sequence=1&amp;isAllowed=y</a></li>
+<li>EFECTOS DE LA REDUCCIÓN DE TARIFAS DE TERMINACIÓN MÓVIL EN EL BIENESTAR EN EL MERCADO DE LAS TELECOMUNICACIONES DE MÉXICO* D, <a href="https://www.scielo.org.mx/pdf/ete/v80n319/2448-718X-ete-80-319-00651.pdf">https://www.scielo.org.mx/pdf/ete/v80n319/2448-718X-ete-80-319-00651.pdf</a></li>
+<li>\ .' D. - Comisión Federal de Competencia Económica, <a href="https://www.cofece.mx/cfcresoluciones/docs/Asuntos%20Juridicos/V47/9/1609935.pdf">https://www.cofece.mx/cfcresoluciones/docs/Asuntos%20Juridicos/V47/9/1609935.pdf</a></li>
+<li>Reporte de Información Comparable de Planes y Tarifas de Servicios de Telecomunicaciones Fijas (Single, Doble y Triple play) 2025 - IFT, <a href="https://www.ift.org.mx/sites/default/files/reporte_de_planes_y_tarifas_fijos_2025_1.pdf">https://www.ift.org.mx/sites/default/files/reporte_de_planes_y_tarifas_fijos_2025_1.pdf</a></li>
+<li>Herramientas para empoderar a las personas usuarias de servicios de telecomunicaciones. - Dalefon, <a href="https://cdn.dalefon.mx/legales/herramientas_para_empoderar_usuarios.pdf">https://cdn.dalefon.mx/legales/herramientas_para_empoderar_usuarios.pdf</a></li>
+<li>ACUERDO MEDIANTE EL CUAL SE ESTABLECE EL PROCEDIMIENTO PARA LA PRESENTACIÓN DE LA SOLICITUD ELECTRÓNICA DE REGISTRO DE TARIFAS - IFT, <a href="https://www.ift.org.mx/sites/default/files/industria/temasrelevantes/607/documentos/proyectosolelecregtarifas.pdf">https://www.ift.org.mx/sites/default/files/industria/temasrelevantes/607/documentos/proyectosolelecregtarifas.pdf</a></li>
+<li>informe - SERT - IFT, <a href="https://sert.ift.org.mx/tarifasVE/upload/files/proganualinformes/38477_211015201417_5747.pdf">https://sert.ift.org.mx/tarifasVE/upload/files/proganualinformes/38477_211015201417_5747.pdf</a></li>
+<li>Acuerdo que aprueba consulta pública - IFT, <a href="https://www.ift.org.mx/sites/default/files/conocenos/pleno/sesiones/acuerdoliga/pift100419190acc.pdf">https://www.ift.org.mx/sites/default/files/conocenos/pleno/sesiones/acuerdoliga/pift100419190acc.pdf</a></li>
+<li>INSCRIPCIÓN EN EL REGISTRO PÚBLICO DE CONCESIONES - IFT, <a href="https://sert.ift.org.mx/tarifasVE/upload/files/proganualinformes/58635_220503002229_768.pdf">https://sert.ift.org.mx/tarifasVE/upload/files/proganualinformes/58635_220503002229_768.pdf</a></li>
+<li>Consulta Histórico de Registro de Tarifas - | Comisión Reguladora de Telecomunicaciones - IFT, <a href="https://www.ift.org.mx/industria/consulta-historico-de-registro-de-tarifas">https://www.ift.org.mx/industria/consulta-historico-de-registro-de-tarifas</a></li>
+<li>Visor de tarifas del Instituto Federal de Telecomunicaciones, <a href="https://tarifas.ift.org.mx/">https://tarifas.ift.org.mx/</a></li>
+<li>Internet | Comisión Reguladora de Telecomunicaciones - IFT, <a href="https://www.ift.org.mx/medios/internet">https://www.ift.org.mx/medios/internet</a></li>
+<li>Comparador de planes de los servicios de telecomunicaciones - IFT, <a href="https://www.ift.org.mx/usuarios-y-audiencias/comparador-de-planes-de-los-servicios-de-telecomunicaciones">https://www.ift.org.mx/usuarios-y-audiencias/comparador-de-planes-de-los-servicios-de-telecomunicaciones</a></li>
+<li>Comparador de planes de telefonía móvil - | Comisión Reguladora de Telecomunicaciones - IFT, <a href="https://www.ift.org.mx/usuarios-telefonia-movil/comparador-de-planes-de-telefonia-movil">https://www.ift.org.mx/usuarios-telefonia-movil/comparador-de-planes-de-telefonia-movil</a></li>
+<li>Usuarios Telefonía Móvil | Comisión Reguladora de Telecomunicaciones - IFT, <a href="https://www.ift.org.mx/secciones/usuarios-telefon%C3%ADa-m%C3%B3vil">https://www.ift.org.mx/secciones/usuarios-telefon%C3%ADa-m%C3%B3vil</a></li>
+<li>COMUNICADO 54 IFT, <a href="https://www.ift.org.mx/sites/default/files/comunicacion-y-medios/comunicados-ift/comunicado54ift_0.pdf">https://www.ift.org.mx/sites/default/files/comunicacion-y-medios/comunicados-ift/comunicado54ift_0.pdf</a></li>
+<li>Comunicados | Comisión Reguladora de Telecomunicaciones - IFT, <a href="https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-sector-de-telecomunicaciones-y-ra?page=85">https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-sector-de-telecomunicaciones-y-ra?page=85</a></li>
+<li>2021 - IFT, <a href="https://www.ift.org.mx/sites/default/files/anuario_2021_0.pdf">https://www.ift.org.mx/sites/default/files/anuario_2021_0.pdf</a></li>
+<li>Comunicados | Comisión Reguladora de Telecomunicaciones - IFT, <a href="https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-ift-da-conocer-nuevos-datos-de-banda-ancha-comunicado-132015-0http%3A/www.ift.org.mx/comunicacion-y-medios/comunicados-ift?page=113">https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-ift-da-conocer-nuevos-datos-de-banda-ancha-comunicado-132015-0http%3A/www.ift.org.mx/comunicacion-y-medios/comunicados-ift?page=113</a></li>
+<li>Comunicados | Page 38 | Comisión Reguladora de ... - IFT, <a href="https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/posicionamiento-del-ift-sobre-la-aprobacion-del-dictamen-de-la-comision-de-puntos-?page=37">https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/posicionamiento-del-ift-sobre-la-aprobacion-del-dictamen-de-la-comision-de-puntos-?page=37</a></li>
+<li>El IFT presenta el Reporte de Información Comparable de Planes y Tarifas de Servicios de Telecomunicaciones Fijas No Residenciales 2024. (Comunicado 28/2024) 5 de abril, <a href="https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-ift-presenta-el-reporte-de-informacion-comparable-de-planes-y-tarifas-de-servicios-de-4">https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-ift-presenta-el-reporte-de-informacion-comparable-de-planes-y-tarifas-de-servicios-de-4</a></li>
+<li>El IFT presenta el Reporte de información comparable de planes y tarifas de servicios de telecomunicaciones fijas Doble y Triple Play 2023(Comunicado 120) 26 de diciembre, <a href="https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-ift-presenta-el-reporte-de-informacion-comparable-de-planes-y-tarifas-de-servicios-de-3">https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-ift-presenta-el-reporte-de-informacion-comparable-de-planes-y-tarifas-de-servicios-de-3</a></li>
+<li>estudio de las estrategias de mercado - de los ott audiovisuales y los vínculos con los operadores de servicios de telecomunicaciones fijos en méxico - IFT, <a href="https://www.ift.org.mx/sites/default/files/contenidogeneral/autoridad-investigadora/estudiopat2022accesiblevfestrategiasdemercadodelosott.pdf">https://www.ift.org.mx/sites/default/files/contenidogeneral/autoridad-investigadora/estudiopat2022accesiblevfestrategiasdemercadodelosott.pdf</a></li>
+<li>El IFT publica por primera vez el Reporte de Información Comparable de Planes y Tarifas de Servicios de Telecomunicaciones Móviles No Residenciales (Comunicado 102/2024) 10 de octubre, <a href="https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-ift-publica-por-primera-vez-el-reporte-de-informacion-comparable-de-planes-y-tarifas-de-servicios">https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-ift-publica-por-primera-vez-el-reporte-de-informacion-comparable-de-planes-y-tarifas-de-servicios</a></li>
+<li>Pocos lo saben, pero este OMV en México promete más de 100 GB para navegar por poco más de 100 pesos, <a href="https://www.xataka.com.mx/telecomunicaciones/pocos-saben-este-omv-mexico-promete-100-gb-para-navegar-poco-100-pesos">https://www.xataka.com.mx/telecomunicaciones/pocos-saben-este-omv-mexico-promete-100-gb-para-navegar-poco-100-pesos</a></li>
+<li>Compara Profeco “Quién es Quién” entre proveedores de recargas de internet - Gob MX, <a href="https://www.gob.mx/profeco/prensa/compara-profeco-quien-es-quien-entre-proveedores-de-recargas-de-internet">https://www.gob.mx/profeco/prensa/compara-profeco-quien-es-quien-entre-proveedores-de-recargas-de-internet</a></li>
+<li>Visor de tarifas del Instituto Federal de Telecomunicaciones - Telmovil, <a href="https://telmovil.mx/Celebra%20a%20mama%20al%20doble.pdf">https://telmovil.mx/Celebra%20a%20mama%20al%20doble.pdf</a></li>
+<li>Tarifas de Servicios Móviles - Base de datos - datos.gob.mx, <a href="https://www.datos.gob.mx/dataset/tarifas_servicios_moviles">https://www.datos.gob.mx/dataset/tarifas_servicios_moviles</a></li>
+<li>Datos Abiertos - | Comisión Reguladora de Telecomunicaciones - IFT, <a href="https://www.ift.org.mx/estadisticas/datos-abiertos">https://www.ift.org.mx/estadisticas/datos-abiertos</a></li>
+<li>Usuarios y Audiencias - Reporte de Información Comparable de Planes y Tarifas de Servicios de Telecomunicaciones Móviles 2024 - IFT, <a href="https://www.ift.org.mx/usuarios-y-audiencias/reporte-de-informacion-comparable-de-planes-y-tarifas-de-servicios-de-telecomunicaciones-moviles-6">https://www.ift.org.mx/usuarios-y-audiencias/reporte-de-informacion-comparable-de-planes-y-tarifas-de-servicios-de-telecomunicaciones-moviles-6</a></li>
+<li>Comparador de Contratos de Adhesión de Telecomunicaciones - Gob MX, <a href="https://www.gob.mx/profeco/articulos/comparador-de-contratos-de-adhesion-de-telecomunicaciones">https://www.gob.mx/profeco/articulos/comparador-de-contratos-de-adhesion-de-telecomunicaciones</a></li>
+<li>El IFT y PROFECO presentan el Comparador de Contratos de Servicios de Telecomunicaciones. 4 de junio, <a href="https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-ift-y-profeco-presentan-el-comparador-de-contratos-de-servicios-de-telecomunicaciones-4-de-junio">https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/el-ift-y-profeco-presentan-el-comparador-de-contratos-de-servicios-de-telecomunicaciones-4-de-junio</a></li>
+<li>Blog | Archivo | Procuraduría Federal del Consumidor | Gobierno, <a href="https://www.gob.mx/profeco/archivo/articulos?order=DESC&amp;page=26">https://www.gob.mx/profeco/archivo/articulos?order=DESC&amp;page=26</a></li>
+<li>Comunicados | Comisión Reguladora de Telecomunicaciones - IFT, <a href="https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/aumenta-el-uso-de-los-?page=35">https://www.ift.org.mx/comunicacion-y-medios/comunicados-ift/es/aumenta-el-uso-de-los-?page=35</a></li>
+<li>Portal de Usuarios de Servicios de Telecomunicaciones - IFT, <a href="https://www.ift.org.mx/portalusuarios">https://www.ift.org.mx/portalusuarios</a></li>
+<li>Quién es Quién en los Precios | PROFECO, <a href="https://qqp.profeco.gob.mx/">https://qqp.profeco.gob.mx/</a></li>
+<li>¿Cómo Comparar Precios de Televisores y Celulares en Buen Fin 2024? Profeco Tiene Herramienta - N+, <a href="https://www.nmas.com.mx/economia/como-ver-precios-en-buen-fin-2024-profeco-quien-es-quien-comparar-televisores-celulares/">https://www.nmas.com.mx/economia/como-ver-precios-en-buen-fin-2024-profeco-quien-es-quien-comparar-televisores-celulares/</a></li>
+<li>Revista del consumidor | PROFECO, <a href="https://revistadelconsumidor.profeco.gob.mx/">https://revistadelconsumidor.profeco.gob.mx/</a></li>
+<li>Checa tu plan - OSIPTEL, <a href="https://www.checatuplan.pe/">https://www.checatuplan.pe/</a></li>
+<li>Herramienta digital Comparatel se renueva a Checa Tu Plan, <a href="https://www.osiptel.gob.pe/portal-del-usuario/noticias/herramienta-digital-comparatel-se-renueva-a-checa-tu-plan/">https://www.osiptel.gob.pe/portal-del-usuario/noticias/herramienta-digital-comparatel-se-renueva-a-checa-tu-plan/</a></li>
+<li>PREGUNTAS Y RESPUESTAS INCREMENTOS TARIFARIOS, <a href="https://www.osiptel.gob.pe/portal-del-usuario/preguntas-frecuentes/preguntas-y-respuestas-incrementos-tarifarios/">https://www.osiptel.gob.pe/portal-del-usuario/preguntas-frecuentes/preguntas-y-respuestas-incrementos-tarifarios/</a></li>
+<li>Día del consumidor: OSIPTEL empodera a los usuarios a través de herramientas digitales de acceso gratuito, <a href="https://www.osiptel.gob.pe/portal-del-usuario/noticias/dia-del-consumidor-osiptel-empodera-a-los-usuarios-a-traves-de-herramientas-digitales-de-acceso-gratuito/">https://www.osiptel.gob.pe/portal-del-usuario/noticias/dia-del-consumidor-osiptel-empodera-a-los-usuarios-a-traves-de-herramientas-digitales-de-acceso-gratuito/</a></li>
+<li>Accede a nuestros servicios en línea de manera fácil - Campañas - Organismo Supervisor de Inversión Privada en Telecomunicaciones, <a href="https://www.gob.pe/institucion/osiptel/campa%C3%B1as/21500-accede-a-nuestros-servicios-en-linea-de-manera-facil">https://www.gob.pe/institucion/osiptel/campa%C3%B1as/21500-accede-a-nuestros-servicios-en-linea-de-manera-facil</a></li>
+<li>Esta Navidad encuentra tu plan perfecto ingresando a Checa tu plan del OSIPTEL, <a href="https://www.osiptel.gob.pe/portal-del-usuario/noticias/esta-navidad-encuentra-tu-plan-perfecto-ingresando-a-checa-tu-plan-del-osiptel/">https://www.osiptel.gob.pe/portal-del-usuario/noticias/esta-navidad-encuentra-tu-plan-perfecto-ingresando-a-checa-tu-plan-del-osiptel/</a></li>
+<li>Comparar planes y tarifas de los servicios de telecomunicaciones - Checa tu plan, <a href="https://www.gob.pe/9163-comparar-planes-y-tarifas-de-los-servicios-de-telecomunicaciones-checa-tu-plan">https://www.gob.pe/9163-comparar-planes-y-tarifas-de-los-servicios-de-telecomunicaciones-checa-tu-plan</a></li>
+<li>Comparador planes CRC - Comisión de Regulación de Comunicaciones, <a href="https://comparador.crcom.gov.co/">https://comparador.crcom.gov.co/</a></li>
+<li>¿Claro, Movistar, Tigo o WOM? Así funciona el 'Comparador de Tarifas' que te ayuda a elegir entre más de 300 planes - ENTER.CO, <a href="https://www.enter.co/colombia/claro-movistar-tigo-o-wom-asi-funciona-el-comparador-de-tarifas-que-te-ayuda-a-elegir-entre-mas-de-300-planes/">https://www.enter.co/colombia/claro-movistar-tigo-o-wom-asi-funciona-el-comparador-de-tarifas-que-te-ayuda-a-elegir-entre-mas-de-300-planes/</a></li>
+<li>Internet por Fibra Óptica - www.avitels.com, <a href="https://www.avitels.com/internet-fibra/">https://www.avitels.com/internet-fibra/</a></li>
+<li>términos y condiciones generales del servicio - Comparador planes CRC, <a href="https://comparador.crcom.gov.co/terms">https://comparador.crcom.gov.co/terms</a></li>
+<li>Resolución 8171 de 2026 Comisión de Regulación de Comunicaciones - Secretaría General de la Alcaldía Mayor de Bogotá, <a href="https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=192578">https://www.alcaldiabogota.gov.co/sisjur/normas/Norma1.jsp?i=192578</a></li>
+<li>Si quieres contratar Internet con Digi, Orange o Movistar, hay un mapa de la CNMC que te revela qué velocidad vas a tener - ADSLZone, <a href="https://www.adslzone.net/noticias/operadores/contratar-internet-digi-orange-movistar-mapa-cnmc/">https://www.adslzone.net/noticias/operadores/contratar-internet-digi-orange-movistar-mapa-cnmc/</a></li>
+<li>Simulador de la Factura de Electricidad - CNMC - Comparador de Ofertas de Energía, <a href="https://comparador.cnmc.gob.es/facturaluz/inicio/">https://comparador.cnmc.gob.es/facturaluz/inicio/</a></li>
+<li>CNMC - Comparador de Ofertas de Energía, <a href="https://comparador.cnmc.gob.es/">https://comparador.cnmc.gob.es/</a></li>
+<li>Comparador de ofertas de energía de la CNMC ¿Funciona bien? - Preahorro, <a href="https://preahorro.com/como-ahorrar/comparador-de-ofertas-de-energia-de-la-cnmc-funciona-bien/">https://preahorro.com/como-ahorrar/comparador-de-ofertas-de-energia-de-la-cnmc-funciona-bien/</a></li>
+<li>¿Cómo buscar la tarifa más barata en la CNMC? - Visalia, <a href="https://visalia.es/blog/luz/buscar-tarifa-mas-barata-cnmc/">https://visalia.es/blog/luz/buscar-tarifa-mas-barata-cnmc/</a></li>
+<li>Comparador de Tarifas de móvil | Rastreator.com®, <a href="https://www.rastreator.com/tarifas-movil.aspx">https://www.rastreator.com/tarifas-movil.aspx</a></li>
+<li>Tarifas de Móvil Más Baratas de Julio 2026: Comparativa - Kelisto, <a href="https://www.kelisto.es/telefonia-movil/mejor-compra/las-6-mejores-tarifas-moviles-3754">https://www.kelisto.es/telefonia-movil/mejor-compra/las-6-mejores-tarifas-moviles-3754</a></li>
+<li>¿Cuál es la mejor compañía telefónica? Lo desvelamos - Roams, <a href="https://roams.es/companias-telefonicas/blog/telefonia/mejor-atencion-cliente-operadores/">https://roams.es/companias-telefonicas/blog/telefonia/mejor-atencion-cliente-operadores/</a></li>
+<li>Rastreator.com, <a href="https://www.rastreator.com.mx/">https://www.rastreator.com.mx/</a></li>
+<li>▷ Rastreator Seguros de Auto: Costos y Cómo Funciona, <a href="https://miituo.com/blog/rastreator-seguros-de-auto/">https://miituo.com/blog/rastreator-seguros-de-auto/</a></li>
+<li>El comparador de seguros Rastreator apuesta por el mercado mexicano, <a href="https://marketing4ecommerce.mx/comparador-seguros-rastreator-apuesta-mercado-mexicano/">https://marketing4ecommerce.mx/comparador-seguros-rastreator-apuesta-mercado-mexicano/</a></li>
+<li>▷ Comparador de Seguros de Auto en México - Rastreator.mx®, <a href="https://www.rastreator.mx/">https://www.rastreator.mx/</a></li>
+<li>Rastreator México, el comparador detrás de Seguros.com, <a href="https://www.seguros.com/articulos-destacados/rastreator-comparador-detras-de-seguros-com">https://www.seguros.com/articulos-destacados/rastreator-comparador-detras-de-seguros-com</a></li>
+<li>Placements on WhistleOut for Carriers, <a href="https://www.whistleout.com/CellPhones/WhistleOut-Placements">https://www.whistleout.com/CellPhones/WhistleOut-Placements</a></li>
+<li>WhistleOut: Compare Mobile Plans, Broadband, Tablets &amp; Pay TV, <a href="https://www.whistleout.com.au/">https://www.whistleout.com.au/</a></li>
+<li>American Families Waste $2200/Year on Cell Phones. How Much Are You Overpaying?, <a href="https://www.whistleout.com/CellPhones/Guides/mobile-overspending-report">https://www.whistleout.com/CellPhones/Guides/mobile-overspending-report</a></li>
+<li>How much mobile and internet data do you need? - WhistleOut, <a href="https://www.whistleout.com.au/MobilePhones/Guides/Mobile-broadband-usage-guide">https://www.whistleout.com.au/MobilePhones/Guides/Mobile-broadband-usage-guide</a></li>
+<li>How WhistleOut Uses Contentsquare to Understand User Behavior, <a href="https://contentsquare.com/customers/whistleout/">https://contentsquare.com/customers/whistleout/</a></li>
+<li>WhistleOut: Compare Phone Plans, Internet Plans, Devices, and More, <a href="https://www.whistleout.com/">https://www.whistleout.com/</a></li>
+</ol>
+</blockquote>
+
+    </div>
+</body>
+</html>
