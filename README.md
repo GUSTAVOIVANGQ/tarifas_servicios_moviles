@@ -10,7 +10,7 @@ La plataforma permite a los usuarios finales y analistas navegar por un catálog
 - **Backend:** FastAPI 🚀 (Python)
 - **Procesamiento de Datos:** Polars 🐻 & DuckDB 🦆 (Análisis de alto rendimiento en memoria)
 - **Infraestructura:** Docker 🐳 & Docker Compose
-
+    
 ## Requisitos
 
 - Docker Desktop con Docker Compose
